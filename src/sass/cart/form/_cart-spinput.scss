@@ -1,0 +1,98 @@
+.spinput {
+    position: relative;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    width: auto;
+    height: 45px;
+    color: $color757575;
+    font-size: 18px;
+    line-height: 1.0;
+    padding: 0 15px;
+    //@extend .back-bord;
+    .spinput__minus, .spinput__plus {
+        position: relative;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        line-height: 1.5;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 14px 31px rgba(40, 46, 53, 0.05), 0px 1.75302px 3.88168px rgba(40, 46, 53, 0.05);
+        transition: .2s;
+        &::before {
+            font-size: 130%;
+            content: '\2212';
+        }
+        &:hover, &:focus, &:active{
+            background: $color_brand;
+            color: white;
+        }
+    }
+    .spinput__plus {
+        &::before {
+            content: '\2b';
+        }
+    }
+    .spinput__value {
+        margin: 0;
+        width: 50px;
+        height: 100%;
+        background-color: transparent;
+        text-align: center;
+        vertical-align: baseline;
+        border: none;
+
+        font-size: 1.8rem;
+        line-height: 100%;
+        color: #323232;
+        text-align: center;
+        &:hover, &:focus, &:active{
+            outline: 0;
+            @include box-shadow(none);
+        }
+    }
+}
+
+@media (max-width: 1600px){
+    .spinput {
+        height: 40px;
+        font-size: 16px;
+        line-height: 1.0;
+        padding: 0 10px;
+        .spinput__value {
+            width: 40px;
+        }
+    }
+}
+
+@media (max-width: 1240px){
+    .spinput {
+        height: 38px;
+        font-size: 15px;
+        line-height: 1.0;
+        padding: 0 7px;
+        .spinput__value {
+            width: 36px;
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .spinput {
+        height: 36px;
+        font-size: 14px;
+        line-height: 1.0;
+        padding: 0 6px;
+        .spinput__value {
+            width: 36px;
+        }
+    }
+}

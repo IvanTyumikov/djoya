@@ -1,0 +1,31 @@
+{
+    "name": "Кредит Тинькофф",
+    "settings": [
+        {
+            "variable": "shopId",
+            "name": "shopId"
+        },
+        {
+            "variable": "showcaseId",
+            "name": "showcaseId"
+        },
+        {
+            "variable": "promoCode",
+            "name": "Промокод"
+        },
+        {
+            "variable": "testmode",
+            "name": "Режим",
+            "options": [
+                {
+                    "name": "Тестовый",
+                    "value": "1"
+                },
+                {
+                    "name": "Рабочий",
+                    "value": "0"
+                }
+            ]
+        }
+    ]
+}

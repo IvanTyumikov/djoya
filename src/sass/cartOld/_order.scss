@@ -1,0 +1,238 @@
+.pay {
+    .title {
+        margin-bottom: 25px;
+    }
+    .subtitle {
+        font-family: 'PD-m';
+        font-size: 24px;
+        padding-bottom: 15px;
+        margin: 0 0 20px;
+        border-bottom: 1px solid #a0a0a0;
+    }
+    &-details {
+        &_list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #a0a0a0;
+        }
+        &_item {
+            display: flex;
+            margin-bottom: 10px;
+            .item-caption {
+                font-family: 'Int-m';
+                font-size: 20px;
+                margin-right: 70px;
+                width: 100%;
+                max-width: 220px;
+                @media screen and (max-width: 768px) {
+                    margin-right: calc(
+                        10px + (70 - 10) * ((100vw - 500px) / (768 - 500))
+                    );
+                }
+                @media screen and (max-width: 550px) {
+                    font-size: 18px;
+                }
+                @media screen and (max-width: 500px) {
+                    margin-right: 0;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .item-values {
+                display: flex;
+                flex-direction: column;
+            }
+            .item-value {
+                font-family: 'Int-r';
+                font-size: 20px;
+                margin-bottom: 5px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @media screen and (max-width: 550px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &-box {
+        margin-bottom: 30px;
+        &__header {
+            font-family: 'PD-m';
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        &__list {
+            padding: 15px 0;
+            border: 1px solid #000000;
+            @media screen and (max-width: 550px) {
+                width: 520px;
+            }
+            &_wrapper {
+                width: 100%;
+                @media screen and (max-width: 550px) {
+                    overflow-y: scroll;
+                }
+            }
+        }
+        &__titles {
+            display: flex;
+            font-family: 'PD-m';
+            font-size: 20px;
+            padding: 0 20px 15px;
+            border-bottom: 1px solid #000;
+            &_name {
+                width: 100%;
+                max-width: 530px;
+                @media screen and (max-width: 1360px) {
+                    max-width: 490px;
+                }
+                @media screen and (max-width: 991px) {
+                    max-width: 350px;
+                }
+                @media screen and (max-width: 768px) {
+                    flex: none;
+                    max-width: calc(
+                        245px + (350 - 245) * ((100vw - 550px) / (768 - 550))
+                    );
+                }
+                @media screen and (max-width: 550px) {
+                    max-width: 245px;
+                    width: 245px;
+                }
+            }
+            &_count {
+                width: 100%;
+                max-width: 380px;
+                @media screen and (max-width: 1360px) {
+                    max-width: 310px;
+                }
+                @media screen and (max-width: 1200px) {
+                    max-width: 265px;
+                }
+                @media screen and (max-width: 991px) {
+                    max-width: 185px;
+                }
+                @media screen and (max-width: 550px) {
+                    max-width: 130px;
+                    width: 130px;
+                }
+            }
+        }
+        &__body {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        &__items {
+            display: flex;
+            padding: 10px 20px;
+            border-bottom: 1px solid #000;
+            font-family: 'Int-r';
+            font-size: 18px;
+            background: #e3e3e3;
+            &_name {
+                width: 100%;
+                max-width: 540px;
+                @media screen and (max-width: 1360px) {
+                    max-width: 490px;
+                }
+                @media screen and (max-width: 991px) {
+                    max-width: 350px;
+                }
+                @media screen and (max-width: 768px) {
+                    flex: none;
+                    max-width: calc(
+                        245px + (350 - 245) * ((100vw - 550px) / (768 - 550))
+                    );
+                }
+                @media screen and (max-width: 550px) {
+                    max-width: 245px;
+                    width: 245px;
+                }
+            }
+            &_count {
+                width: 100%;
+                max-width: 380px;
+                display: flex;
+                align-items: center;
+                @media screen and (max-width: 1360px) {
+                    max-width: 310px;
+                }
+                @media screen and (max-width: 1200px) {
+                    max-width: 265px;
+                }
+                @media screen and (max-width: 991px) {
+                    max-width: 185px;
+                }
+                @media screen and (max-width: 550px) {
+                    max-width: 130px;
+                    width: 130px;
+                }
+            }
+            &_price {
+                display: flex;
+                align-items: center;
+            }
+        }
+        &__delivery {
+            display: flex;
+            padding: 10px 20px;
+            font-family: 'Int-r';
+            font-size: 18px;
+            border-bottom: 1px solid #000;
+            &_caption {
+                width: 100%;
+                max-width: 920px;
+            }
+            &_value {
+            }
+        }
+        &__total {
+            display: flex;
+            width: 100%;
+            padding: 15px 20px 0;
+            width: max-content;
+            margin: 0 65px 0 auto;
+            @media screen and (max-width: 550px) {
+                margin: 0;
+            }
+            &_caption {
+                font-family: 'PD-m';
+                font-size: 20px;
+                margin-right: 30px;
+            }
+            &_value {
+                font-family: 'Int-r';
+                font-size: 18px;
+            }
+        }
+    }
+    &-payments {
+        display: flex;
+        justify-content: flex-end;
+        @media screen and (max-width: 550px) {
+            justify-content: center;
+        }
+        &_btn {
+            font-family: 'Int-m';
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+            max-width: 220px;
+            padding: 8px 15px;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #000;
+            &:hover {
+                color: #000;
+                background-color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+@import '_smart-grid';
+@import '_config';
+@import 'vendor/bootstrap/_bootstrap';
+@import '_font';
+@import '_icon';
+@import '_html';
+
+// module layout
+@import 'layout/_header';
+@import 'layout/_header-mobile';
+@import 'layout/_sidebar';
+@import 'layout/_quest';
+@import 'layout/_mobile';
+@import 'layout/_fixed-socials';
+
+// module slider
+@import 'slider/_prev';
+
+// module review
+@import 'review/_review';
+@import 'review/_review-modal';
+@import 'review/_review-form';
+@import 'review/_wg-review';
+
+// module stocks
+@import 'stocks/_stocks';
+//@import "stocks/_stocks-slider";
+
+// module news
+//@import "news/_news";
+//@import "news/_news-box";
+//@import "news/_news-index";
+//@import "news/_news-view";
+
+// module mail
+@import 'mail/_subscribe';
+
+// module video
+@import 'video/_index';
+
+// module page
+@import 'page/_page-content';
+@import 'page/_page-contact';
+@import 'page/_payment';
+@import 'page/_page';
+@import 'page/_about';
+@import 'page/_oplata';
+@import 'page/_delivery';
+@import 'page/_tehnicheskie-raboty';
+@import 'page/_empty-basket';
+
+// module homepage
+@import 'homepage/_main-info';
+@import 'homepage/_main-categories';
+@import 'homepage/_main-banner';
+@import 'homepage/_block';
+@import 'homepage/_structure';
+@import 'homepage/_sertificat';
+@import 'homepage/_contacts';
+@import 'homepage/_request';
+@import 'homepage/_categories';
+@import 'homepage/_hits';
+@import 'homepage/_contact-form';
+@import 'homepage/_seo-text';
+@import 'homepage/_main-review';
+
+// module cart
+@import 'cartOld/_cart-order';
+@import 'cartOld/_cart-pay';
+@import 'cartOld/_cart-index';
+@import 'cartOld/_order';
+
+// module store
+@import 'store/_category';
+@import 'store/_category-nav';
+@import 'store/_pop';
+// @import "store/_producers";
+@import 'store/_category-view';
+@import 'store/_category-index';
+@import 'store/_catalog-content';
+// @import "store/_product-compare";
+@import 'store/_filter';
+// @import "store/_selected-filters";
+@import 'store/_product-nav';
+@import 'store/_category-list';
+@import 'store/_sidebar-box';
+@import 'store/list-view-loading';
+@import 'store/accessories';
+
+@import 'store/product/_product';
+@import 'store/product/_product-item';
+@import 'store/product/_product-slider';
+@import 'store/product/_product-list';
+@import 'store/product/_product-view';
+@import 'store/product/_product-modal';
+@import 'store/product/_spinput';
+@import 'store/_product-favorite';
+
+@import 'store/widget/_wg-product';
+
+//@import "store/quickfilter/_quickfilter";
+
+// module user
+@import 'user/_index';
+
+// module layout
+@import 'layout/_quest';
+@import 'layout/_footer';
+@import 'layout/_search';
+
+// module dealers
+@import 'dealers/_index';
+
+// slick
+@import 'vendor/slick/_slick';
+@import 'vendor/slick/_slick-theme';
+
+// modal window
+@import 'vendor/modal/_modal';
+@import 'vendor/modal/_modal-write-us';
+@import 'vendor/modal/_message-modal';
+@import 'vendor/modal/_promoCode';
+
+//@import "vendor/aos/aos.scss";
+
+// forms
+@import 'vendor/forms/_form-modal';
+
+// классы модификаторы
+@import '_modificator';
+
+// стили для блога
+@import 'blog/index';
+
+// тегирование
+@import 'tags';
+@import 'select2';

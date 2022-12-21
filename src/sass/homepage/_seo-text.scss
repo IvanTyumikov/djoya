@@ -1,0 +1,151 @@
+.main-seo {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 3;
+        h3 {
+            font-family: 'PD-sb';
+            font-size: 40px;
+            margin: 0 0 20px 0;
+            @media screen and (max-width: 768px) {
+                line-height: 100%;
+                font-size: calc(
+                    32px + (40 - 32) * ((100vw - 320px) / (768 - 320))
+                );
+                margin-bottom: 10px;
+            }
+        }
+        h4 {
+            font-family: 'Int-b';
+            font-size: 20px;
+            margin: 40px 0 20px 0;
+            @media screen and (max-width: 768px) {
+                font-size: calc(
+                    16px + (20 - 16) * ((100vw - 320px) / (768 - 320))
+                );
+                margin-top: calc(
+                    20px + (40 - 20) * ((100vw - 320px) / (768 - 320))
+                );
+                margin-bottom: calc(
+                    10px + (20 - 10) * ((100vw - 320px) / (768 - 320))
+                );
+            }
+        }
+        p {
+            font-family: 'Int-r';
+            font-size: 20px;
+            max-width: 810px;
+            line-height: 134%;
+            @media screen and (max-width: 768px) {
+                font-size: calc(
+                    16px + (20 - 16) * ((100vw - 320px) / (768 - 320))
+                );
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        .seo-block-1 {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: '';
+                display: block;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                z-index: 1;
+                top: 20px;
+                right: 15px;
+                background: url('../images/background-items/seashell.svg')
+                    no-repeat;
+                @media screen and (max-width: 500px) {
+                    display: none;
+                }
+            }
+        }
+        .seo-block-2 {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: '';
+                display: block;
+                width: 51px;
+                height: 44px;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background: url('../images/background-items/ring.svg') no-repeat;
+                @media screen and (max-width: 500px) {
+                    display: none;
+                }
+            }
+        }
+        .seo-block-3 {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: '';
+                display: block;
+                width: 73px;
+                height: 73px;
+                position: absolute;
+                z-index: 1;
+                top: 20px;
+                right: 0;
+                background: url('../images/background-items/necklace-too.svg')
+                    no-repeat;
+                @media screen and (max-width: 500px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.seo-text_body {
+    margin-top: 21px;
+    padding: 60px 65px;
+    background: #ededed;
+    color: #000;
+    @media screen and (max-width: 768px) {
+        padding: calc(10px + (60 - 10) * ((100vw - 320px) / (768 - 320)))
+            calc(10px + (65 - 10) * ((100vw - 320px) / (768 - 320)));
+    }
+    h2 {
+        font-family: 'PD-b';
+        font-size: 40px;
+        line-height: 100%;
+        @media screen and (max-width: 768px) {
+            line-height: 100%;
+            font-size: calc(26px + (50 - 26) * ((100vw - 320px) / (768 - 320)));
+        }
+    }
+    h3 {
+        font-family: 'Int-b';
+        font-size: 20px;
+    }
+    p {
+        font-family: 'Int-r';
+        font-size: 18px;
+        @media screen and (max-width: 768px) {
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (768 - 320)));
+        }
+    }
+}

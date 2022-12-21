@@ -1,0 +1,205 @@
+$skelet-color: #eef2fb;
+
+$skelet-blur-width: 200px;
+$skelet-blur-size: 150px;
+
+
+// Скелет для вида items
+$skelet-item-image: linear-gradient($skelet-color 280px, transparent 0); // изображение
+$skelet-item-image-size: 280px 278px; // размер изображения
+$skelet-item-image-position: 0 10px; // позиция изображения
+
+$skelet-item-price: linear-gradient($skelet-color 140px, transparent 0); // цена
+$skelet-item-price-size: 140px 25px; // размер цены
+$skelet-item-price-position: 0 305px; // позиция цены
+
+$skelet-item-title1: linear-gradient($skelet-color 280px, transparent 0); // заголовок, строка 1
+$skelet-item-title1-size: 280px 25px; // размер строки 1
+$skelet-item-title1-position: 0 345px; // позиция строки 1
+
+// Скелет для вида lists
+$skelet-list-image: linear-gradient($skelet-color 234px, transparent 0);
+$skelet-list-image-size: 234px 232px;
+$skelet-list-image-position: 0 0;
+
+$skelet-list-new: linear-gradient($skelet-color 80px, transparent 0);
+$skelet-list-new-size: 80px 15px; 
+$skelet-list-new-position: 267px 0; 
+
+$skelet-list-title: linear-gradient($skelet-color 400px, transparent 0); 
+$skelet-list-title-size: 400px 25px;
+$skelet-list-title-position: 267px 28px;
+
+$skelet-list-attr1: linear-gradient($skelet-color 250px, transparent 0); 
+$skelet-list-attr1-size: 250px 15px;
+$skelet-list-attr1-position: 267px 65px;
+
+$skelet-list-attr2: linear-gradient($skelet-color 270px, transparent 0); 
+$skelet-list-attr2-size: 270px 15px;
+$skelet-list-attr2-position: 267px 90px;
+
+$skelet-list-attr3: linear-gradient($skelet-color 80px, transparent 0); 
+$skelet-list-attr3-size: 80px 15px;
+$skelet-list-attr3-position: 267px 115px;
+
+$skelet-list-attr4: linear-gradient($skelet-color 100px, transparent 0); 
+$skelet-list-attr4-size: 100px 15px;
+$skelet-list-attr4-position: 267px 140px;
+
+$skelet-list-attr5: linear-gradient($skelet-color 90px, transparent 0); 
+$skelet-list-attr5-size: 90px 15px;
+$skelet-list-attr5-position: 267px 165px;
+
+$skelet-list-attr6: linear-gradient($skelet-color 112px, transparent 0); 
+$skelet-list-attr6-size: 112px 20px;
+$skelet-list-attr6-position: 267px 190px;
+
+$skelet-list-price: linear-gradient($skelet-color 112px, transparent 0); 
+$skelet-list-price-size: 112px 30px;
+$skelet-list-price-position: 975px 15px;
+
+$skelet-list-cart: linear-gradient($skelet-color 151px, transparent 0); 
+$skelet-list-cart-size: 151px 45px;
+$skelet-list-cart-position: 975px 175px;
+
+$skelet-list-favorite: linear-gradient($skelet-color 30px, transparent 0); 
+$skelet-list-favorite-size: 30px 30px;
+$skelet-list-favorite-position: 1216px 5px;
+
+// скелет перед загрузкой товаров
+// .list-view-loading{
+// 	.product-list{
+// 		position: relative;
+// 		opacity: 1;
+// 	    transition: .3s;
+// 	    &:before{
+// 	    	position: absolute;
+// 	    	content: '';
+// 	    	width: 100%;
+// 	    	height: 100%;
+// 	    	background-image: 
+// 	    	    linear-gradient(90deg, rgba(white, 0) 0, rgba(white, .4) 50%, rgba(white, 0) 100%), 
+// 	    	    $skelet-list-image,
+// 	    	    $skelet-list-new,
+// 	    	    $skelet-list-title,
+// 	    	    $skelet-list-attr1,
+// 	    	    $skelet-list-attr2,
+// 	    	    $skelet-list-attr3,
+// 	    	    $skelet-list-attr4,
+// 	    	    $skelet-list-attr5,
+// 	    	    $skelet-list-attr6,
+// 	    	    $skelet-list-price,
+// 	    	    $skelet-list-cart,
+// 	    	    $skelet-list-favorite,
+// 	    		linear-gradient(white 100%, transparent 0);
+// 	    	background-size: 
+// 	    		$skelet-blur-size,
+// 	    		$skelet-list-image-size,
+// 	    	    $skelet-list-new-size,
+// 	    	    $skelet-list-title-size,
+// 	    	    $skelet-list-attr1-size,
+// 	    	    $skelet-list-attr2-size,
+// 	    	    $skelet-list-attr3-size,
+// 	    	    $skelet-list-attr4-size,
+// 	    	    $skelet-list-attr5-size,
+// 	    	    $skelet-list-attr6-size,
+// 	    	    $skelet-list-price-size,
+// 	    	    $skelet-list-cart-size,
+// 	    	    $skelet-list-favorite-size,
+// 	    		100% 100%;
+
+// 	    	background-position: 
+// 	    		-100% 0,
+// 	    		$skelet-list-image-position,
+// 	    	    $skelet-list-new-position,
+// 	    	    $skelet-list-title-position,
+// 	    	    $skelet-list-attr1-position,
+// 	    	    $skelet-list-attr2-position,
+// 	    	    $skelet-list-attr3-position,
+// 	    	    $skelet-list-attr4-position,
+// 	    	    $skelet-list-attr5-position,
+// 	    	    $skelet-list-attr6-position,
+// 	    	    $skelet-list-price-position,
+// 	    	    $skelet-list-cart-position,
+// 	    	    $skelet-list-favorite-position,
+// 	    		0 0;
+
+// 	    	background-repeat: no-repeat;
+// 	    	animation: loadingSkelet2 3s infinite;
+// 	    	z-index: 150;
+// 	    }
+// 	}
+// 	.product-item{
+// 		position: relative;
+// 		opacity: 1;
+// 	    transition: .3s;
+// 	    &:hover{
+// 	    	border: 1px solid transparent;
+// 	    	border-bottom: 1px solid transparent;
+// 	    	.product-item__buts{
+// 	    		opacity: 0;
+// 	    	}
+// 	    }
+// 	    &:before{
+// 	    	position: absolute;
+// 	    	content: '';
+// 	    	width: 100%;
+// 	    	height: 100%;
+// 	    	background-image: 
+// 	    	    linear-gradient(90deg, rgba(white, 0) 0, rgba(white, .4) 50%, rgba(white, 0) 100%), 
+// 	    	    $skelet-item-image,
+// 	    	    $skelet-item-price,
+// 	    	    $skelet-item-title1,
+// 	    		linear-gradient(white 100%, transparent 0);
+
+// 	    	background-size: 
+// 	    		$skelet-blur-size,
+// 	    		$skelet-item-image-size,
+// 	    	    $skelet-item-price-size,
+// 	    	    $skelet-item-title1-size,
+// 	    		100% 100%;
+
+// 	    	background-position: 
+// 	    		-100% 0,
+// 	    		$skelet-item-image-position,
+// 	    	    $skelet-item-price-position,
+// 	    	    $skelet-item-title1-position,
+// 	    		0 0;
+
+// 	    	background-repeat: no-repeat;
+// 	    	animation: loadingSkelet1 1.5s infinite;
+// 	    	z-index: 150;
+// 	    }
+// 	}
+// }
+
+@keyframes loadingSkelet1 {
+	to {
+		background-position:
+			350% 0,        
+			$skelet-item-image-position,
+    	    $skelet-item-price-position,
+    	    $skelet-item-title1-position,
+			0 0;
+	}
+}
+
+@keyframes loadingSkelet2 {
+	to {
+		background-position:
+			700% 0,        
+			$skelet-list-image-position,
+			$skelet-list-new-position,
+			$skelet-list-title-position,
+			$skelet-list-attr1-position,
+			$skelet-list-attr2-position,
+			$skelet-list-attr3-position,
+			$skelet-list-attr4-position,
+			$skelet-list-attr5-position,
+			$skelet-list-attr6-position,
+			$skelet-list-price-position,
+			$skelet-list-cart-position,
+			$skelet-list-favorite-position,
+			0 0;
+	}
+}

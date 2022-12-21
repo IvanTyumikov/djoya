@@ -1,0 +1,103 @@
+.delivery-list{
+	margin: 0 -15px;
+	.delivery-list__item{
+		position: relative;
+		width: calc(100% / 3 - 30px);
+		margin: 0 15px 30px;
+		padding: 20px;
+		background: $colorWhite;
+		border: 1px solid $colorBorder;
+		@include border-radius(5px);
+		&.active{
+			border-color: $color00A44B;
+			&:after{
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: -2px;
+				left: -2px;
+				width: calc(100% + 4px);
+				height: calc(100% + 4px);
+				background: $color00A44B;
+				@include border-radius(5px);
+			}
+		}
+	}
+	.delivery-list__desc{
+		color: $color757575;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 16px;
+		padding: 0 0 44px;
+	}
+	.delivery-list__price{
+		position: absolute;
+		left: 0;
+		bottom: 20px;
+		color: $color00A44B;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 18px;
+		padding: 0 20px;
+		svg{
+            width: 10px;
+            height: 14px;
+            path{
+                fill: $color00A44B;
+            }
+        }
+	}
+	input[type="radio"]{
+        vertical-align: top;
+		width: 0;
+		height: 0;
+		margin: 0;
+        & + label {
+		    color: $color212121;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 1.1;
+            cursor: pointer;
+            min-height: auto;
+		    margin: 0 0 7px;
+        }
+        &:not(checked) {
+            position: absolute;
+            opacity: 0;
+            & + label {
+                position: relative;
+                padding: 0 30px 0 0;
+                &:before, &:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					@include border-radius(50%);
+					@include transition(all .3s);
+				}
+				&:before {
+			        top: 0;
+			        width: 17px;
+    				height: 17px;
+			        border: 1px solid rgba($color757575, 1);
+			    }
+			    &:after {
+			        top: 4px;
+			    	right: 4px;
+					width: 9px;
+			    	height: 9px;
+			        background: rgba($colorCF2034, 1);
+			        opacity: 0;
+			    }
+            }
+        }
+        &:checked{
+        	opacity: 0;
+            & + label{
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

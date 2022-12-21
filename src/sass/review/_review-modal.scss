@@ -1,0 +1,84 @@
+.review-modal{
+	@at-root.product-modal__close{
+		position: absolute;
+		top: 0;
+		right: -20px;
+		background: none;
+		border: none;
+		box-shadow: none;
+		cursor: pointer;
+	}
+	.modal-dialog{
+			max-width: 630px;
+			width: 100%;
+		.modal-content{
+			.review-box{
+				&__item{
+					margin: 0 0 1.5rem 0;
+				}
+				&__name{
+					font-size: 16px;
+					font-weight: bold;
+					.review-box__date{
+						display: inline-block;
+						margin: 0 0 0 1.5rem;
+						font-size: 11px;
+						font-weight: normal;
+					}
+				}
+				.rating-list{
+					max-width: 155px;
+				}
+			}
+			.raiting-form{
+				display: inline-block;
+			}
+			.form-bot{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+	}
+}
+
+.raiting-list-form{
+	display: flex;
+	.raiting-list-form__item{
+		color: #faca37;
+		font-size: 24px;
+		padding: 0 10px 0 0;
+		transition: .3s;
+		cursor: pointer;
+		svg path{
+			stroke: #7A8086;
+			fill: none;
+		}
+		&.active{
+			svg path{
+				stroke: #F30058;
+				fill: #F30058;
+			}
+		}
+	}
+	&:not(.no-hover){
+		&:hover{
+			cursor: pointer;
+			.raiting-list-form__item{
+				transition: .3s;
+				svg path{
+					stroke: #F30058;
+					fill: #F30058;
+				}
+				&:hover{
+					& ~ .raiting-list-form__item{
+						svg path{
+							stroke: #7A8086;
+							fill: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,121 @@
+.pop{
+	padding: 7rem 0;
+	background: #E5E5E5;
+	@media(max-width: 1200px){
+		padding-top: 28rem;
+	}
+	@media(max-width: 991px){
+		padding-top: 10rem;
+	}
+	@media(max-width: 767px){
+		padding-bottom: 3rem;
+		padding-top: 16rem;
+	}
+	&__top{
+
+	}
+	&__main{
+		position: relative;
+		z-index: 1;
+		.link-catalog{
+			position: absolute;
+			top: 380px;
+			right: 100px;
+			@media(max-width: 1830px){
+				right: 40px;
+			}
+			@media(max-width: 1770px){
+				display: none;
+			}
+		}
+	}
+	@at-root.pop-categories{
+		margin: 2.5rem 0 2rem 0;
+		padding: 0;
+		overflow-y: hidden;
+		overflow-x: auto;
+		>ul{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			width: 100%;
+			>li{
+				display: inline-flex;
+				justify-content: center;
+				height: 30px;
+				margin: 0 3rem 1rem 0;
+				position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 1px;
+					width: 100%;
+					border-bottom: 2px solid #D9DDE8;
+					z-index: -1;
+				}
+				@media(max-width: 767px){
+					border-bottom: none;
+				}
+				&.active{
+					a{
+						border-bottom: 2px solid #00978E;
+						color: #00978E;
+					}
+				}
+				input[type="checkbox"] {
+					position: absolute;
+					left: -9999px;
+				}
+				label{
+					padding: 0;
+					margin: 0 0 2px 0;
+					width: 100%;
+					height: 100%;
+					cursor: pointer;
+					font-size: 1.8rem;
+					line-height: 100%;
+					color: #38434E;
+					background: none;
+					border-radius: 0;
+					white-space: nowrap;
+					border-bottom: 2px solid transparent;
+					transition: .3s;
+					&:hover{
+						border-bottom: 2px solid #00978E;
+					}
+				}
+				input[type="checkbox"]:checked+label{
+					border-bottom: 2px solid #00978E;
+					color: #00978E;
+				}
+				a{
+					font-size: 1.8rem;
+					line-height: 100%;
+					color: #38434E;
+					white-space: nowrap;
+				}
+			}
+			>li:last-child{
+				margin: 0;
+			}
+			>li:hover{
+				label{
+					
+				}
+			}
+		}
+	}
+	.pr-slider__items{
+		max-width: 1255px;
+	}
+}
+
+.pop-categories{
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.pop-categories::-webkit-scrollbar {
+	width: 0;
+}

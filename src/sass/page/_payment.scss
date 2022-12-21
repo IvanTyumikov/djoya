@@ -1,0 +1,25 @@
+.pay-credit{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    &__item{
+        width: calc(100% / 3 - 20px);
+        margin: 0 10px 20px 10px;
+        @media(max-width: 767px){
+            width: calc(100% / 2 - 20px);
+        }
+        @media(max-width: 460px){
+            width: 100%;
+        }
+        @at-root.pay-credit__img{
+
+        }
+        @at-root.pay-credit__title{
+            font-size: 1.8rem;
+            line-height: 110%;
+            color: #38434E;
+            margin-top: 7px;
+
+        }
+    }
+}

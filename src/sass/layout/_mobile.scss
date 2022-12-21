@@ -1,0 +1,113 @@
+.mobile{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	background: white;
+	width: 100%;
+	transform: translateX(-100%);
+	transition: all .6s ease;
+	padding-top: 75px;
+	overflow-y: auto;
+	z-index: 200;
+	@at-root.mobile.active{
+		transform: translateX(0);
+	}
+	@at-root.mobile__close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		svg rect{
+			fill: black;
+		}
+		svg rect:nth-child(1){
+			transform: translate(16px,-1px) rotate(45deg);
+		}
+		svg rect:nth-child(2){
+			display: none;
+		}
+		svg rect:nth-child(3){
+			transform: translate(-7px,-8px) rotate(-45deg);
+		}
+	}
+	@at-root.mobile__top{
+		display: flex;
+		align-items: center;
+		background: #F8F8F8;
+		padding: 2rem 3rem;
+		@at-root.mobile__logo{
+			margin-right: 2.2rem;
+		}
+		@at-root.mobile__catalog-link{
+			display: inline-flex;
+			align-items: center;
+			height: 38px;
+			padding: 0 2rem;
+			color: white;
+			background: linear-gradient(90deg, #F30058 0%, #FF0000 100%);
+			border-radius: 5px;
+			margin-right: 2.9rem;
+			&:hover, &:focus{
+				color: white;
+			}
+			span{
+
+			}
+			i{
+				margin-left: 1rem;
+				font-size: 9px;
+			}
+		}
+		@at-root.mobile__close{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+	}
+	@at-root.mobile__main{
+		height: 100%;
+		background: white;
+		padding-top: 2rem;
+		padding-left: 2rem;
+		padding-bottom: 3rem;
+		@at-root.mobile__nav{
+			> li{
+				list-style: none;
+				> a{
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 40px;
+					color: #212121;
+				}
+				>ul{
+					display: none;
+				}
+			}
+		}
+		.footer-contacts{
+			margin-top: 3rem;
+			align-items: flex-start;
+			&__mail{
+				color: #212121;
+			}
+			&__time{
+				color: #757575;
+			}
+			&__phone{
+
+			}
+			&__link-modal{
+				margin-top: 1rem;
+			}
+		}
+	}
+}
+
+.mobile-open-open{
+	overflow: hidden !important;
+}

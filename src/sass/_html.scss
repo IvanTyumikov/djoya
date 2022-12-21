@@ -1,0 +1,481 @@
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: white;
+    font-family: $main-font;
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #000;
+    position: relative;
+    margin: 0;
+    &.no-active {
+        overflow-y: hidden;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+}
+
+p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    margin: 0 auto;
+    //overflow-x: hidden;
+    transition: all 0.6s ease;
+    transform: none;
+    // max-width: 1920px;
+    @at-root.footer {
+        flex: 1;
+    }
+    @at-root.main {
+        width: calc(100% - 340px);
+        margin-left: 340px;
+        @media (max-width: 1580px) {
+            width: calc(100% - 300px);
+            margin-left: 300px;
+        }
+        @media (max-width: 1199px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+//Размер контейнера сетки
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    width: 100%;
+    max-width: calc(1110px + 12rem * 2);
+    @media (min-width: 200px) {
+        max-width: 750px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @media (min-width: 768px) {
+        max-width: 750px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @media (min-width: 992px) {
+        max-width: 970px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @media (min-width: 1200px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media (min-width: 1359px) {
+        //padding-left: 12rem;
+        //padding-right: 12rem;
+        max-width: 1110px;
+    }
+}
+
+.overlay-main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0404046b;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease-in-out;
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: 2;
+    &.open {
+        opacity: 1;
+        pointer-events: inherit;
+    }
+}
+
+//Все ссылки
+a {
+    font-size: 1.8rem;
+    line-height: 130%;
+    font-weight: normal;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-style: normal;
+    font-weight: normal;
+    color: #000;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 100%;
+    color: #000;
+    @media (max-width: 767px) {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    @media (max-width: 767px) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    @media (max-width: 767px) {
+        font-size: 1.6rem;
+    }
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+//Основные заголовки
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 576px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .btn {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.title {
+    font-size: 4.5rem;
+    line-height: 100%;
+    color: #38434e;
+    @media (max-width: 767px) {
+        font-size: 3rem;
+    }
+}
+
+.desc {
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #89929c;
+    &-big {
+        font-size: 2.4rem;
+        color: #52585f;
+        @media (max-width: 576px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+// Уведомление о добавление товара в корзину, либо удаления оного
+.notifications {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    &.top-right {
+        right: 15px;
+        left: 15px;
+        top: 50px;
+        bottom: 50px;
+        width: 290px;
+        height: 85px;
+        margin: auto;
+        @media (max-width: 576px) {
+            font-size: 1.4rem;
+        }
+    }
+    & > div {
+        position: relative;
+        z-index: 9999;
+        font-family: 'Int-m';
+        background: #f8cd94;
+        color: #000;
+        padding: 20px 25px;
+        border-radius: 4px;
+        text-align: center;
+    }
+}
+
+// Хлебные крошки
+.breadcrumb {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 0 !important;
+    @media (max-width: 768px) {
+        width: max-content;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+    }
+    %breadcrumb-fonts {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000;
+        font-family: 'PD-r';
+    }
+    li {
+        list-style: none;
+        text-decoration-line: none;
+        margin-right: 0.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 140% !important;
+        font-size: 14px;
+        &:last-child {
+            color: #000;
+            text-transform: uppercase;
+            font-family: 'Int-r';
+            white-space: nowrap;
+        }
+        a {
+            font-family: 'Int-r';
+            font-size: 14px;
+            color: #828282;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.breadcrumbs__wrapper {
+    display: flex;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+        overflow-x: scroll;
+    }
+}
+
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #828282;
+    content: '\2022';
+}
+
+// ajax иконка
+.ajax-loading {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10010;
+    pointer-events: none;
+    &:after {
+        content: '';
+        display: block;
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(20, 20, 20, 0.8) url('../images/loading.svg') center
+            no-repeat !important;
+    }
+    &.active {
+        opacity: 1;
+    }
+}
+
+//Тескт, если ничего не найдено, пусто
+.empty {
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #89929c;
+}
+
+label {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 110%;
+    color: #000;
+}
+
+.form-control {
+    background: white;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    border-radius: 0;
+    font-size: 18px;
+    line-height: 100%;
+    color: #38434e;
+    font-family: 'Int-r';
+    box-shadow: none;
+    @media (max-width: 480px) {
+        height: 40px;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border: 2px solid #00978e;
+    }
+}
+
+.help-block.error {
+    position: absolute;
+    bottom: -30px;
+    font-family: 'Int-r';
+    font-size: 12px;
+    color: #a94442;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+// error 404
+.error-404 {
+    .error-404__wrapper {
+        position: relative;
+        max-width: 730px;
+        margin-top: 80px;
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: 'PD-m';
+            font-size: 150px;
+            svg {
+                margin-top: 65px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            @media (max-width: 576px) {
+                font-size: 30px;
+            }
+        }
+        h3 {
+            font-family: 'PD-m';
+            font-size: 50px;
+            text-align: center;
+        }
+        .alert {
+            font-family: 'Int-r';
+            font-size: 24px;
+            text-align: center;
+            line-height: normal;
+        }
+        a {
+            display: block;
+            padding: 8px 15px;
+            width: 100%;
+            max-width: 350px;
+            font-family: 'Int-m';
+            font-size: 18px;
+            border: 1px solid #000000;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .error-404__text {
+            position: relative;
+            z-index: 2;
+        }
+        .star-s {
+            position: absolute;
+            top: 0;
+            left: -150px;
+            z-index: 1;
+        }
+        .star-b {
+            position: absolute;
+            bottom: -80px;
+            right: -120px;
+            z-index: 1;
+        }
+    }
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+.slick-initialized .slick-slide {
+    display: flex !important;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 1;
+    img {
+        object-fit: cover;
+    }
+}
+.preloader-remove {
+    opacity: 0;
+    z-index: -10;
+}

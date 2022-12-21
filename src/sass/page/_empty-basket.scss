@@ -1,0 +1,44 @@
+.empty-basket {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        h1 {
+            text-align: center;
+            margin-bottom: 0;
+            font-family: 'Int-m';
+            line-height: 100%;
+            @media screen and (max-width: 768px) {
+                font-size: calc(
+                    24px + (30 - 24) * ((100vw - 320px) / (768 - 320))
+                );
+            }
+        }
+        h2 {
+            text-align: center;
+            font-family: 'Int-r';
+            line-height: 100%;
+        }
+        .go-to-catalog {
+            width: 100%;
+            max-width: 220px;
+            padding: 8px 15px;
+            text-align: center;
+            background-color: #000;
+            border: 1px solid #000;
+            color: #fff;
+            font-family: 'Int-r';
+            margin-bottom: 15px;
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+        .go-to-main {
+            border-bottom: 1px solid #000;
+            font-family: 'Int-r';
+        }
+    }
+}

@@ -1,0 +1,241 @@
+@import "./settings/_index";
+@import "_loader";
+
+.cart-page-content{
+	background: #E5E5E5;
+	padding-bottom: 10rem;
+	h1{
+		color: $color212121;
+		font-size: 36px;
+		font-family: $familyRegular;
+		line-height: 44px;
+		font-style: normal;
+		font-weight: normal;
+		margin: 0;
+		padding: 0 0 25px;
+	}
+
+	h2{
+		color: $color212121;
+		font-size: 32px;
+		font-family: $familyRegular;
+		font-style: normal;
+		line-height: 39px;
+		font-weight: normal;
+		margin: 0;
+		padding: 0 0 25px;
+	}
+
+	h4{
+		color: $color212121;
+		font-size: 24px;
+		font-family: $familyRegular;
+		font-weight: normal;
+		line-height: 29px;
+		margin: 0;
+		padding: 12px 0;
+	}
+}
+
+.hide{
+	display: none;
+}
+
+.empty-cart{
+    opacity: 0;
+    display: none;
+    &.active{
+        display: block;
+        opacity: 1;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.2;
+        padding: 0 15px 40px;
+    }
+}
+
+.cart-section{
+	.cart-section__content{
+		width: calc(100% - 450px);
+	}
+	.cart-section__result{
+		position: sticky;
+        top: 15px;
+		width: 420px;
+        height: 100%;
+        .category-content-prev{
+            // position: absolute;
+            // top: -60px;
+            // @include transform(translateY(100%));
+            // margin: 0;
+            margin: 7px 0 15px;
+        }
+	}
+	.cart-section__buttons{
+		padding: 20px 0 0;
+	}
+}
+
+.cart-color-757575{
+	color: $color757575;
+}
+.cart-color-212121{
+	color: $color212121;
+}
+
+.cart-text-13-normal{
+	font-size: 13px;
+    font-weight: normal;
+    line-height: 16px;
+}
+.cart-text-16-normal{
+	font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+}
+.cart-text-18-normal{
+	font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+}
+.cart-text-bold{
+	font-weight: bold;
+}
+
+.m-b-25{
+	margin-bottom: 25px;
+}
+
+@media (max-width: 1600px){
+	.cart-page-content{
+		h1{
+			font-size: 34px;
+			line-height: 42px;
+			padding: 0 0 25px;
+		}
+
+		h2{
+			font-size: 30px;
+			line-height: 37px;
+			padding: 0 0 25px;
+		}
+
+		h4{
+			font-size: 22px;
+			line-height: 27px;
+			padding: 12px 0;
+		}
+	}
+
+	.cart-section{
+		.cart-section__content{
+			width: calc(100% - 435px);
+		}
+		.cart-section__result{
+			width: 405px;
+		}
+	}
+}
+
+@media (max-width: 1240px){
+	.cart-page-content{
+		h1{
+			font-size: 32px;
+			line-height: 40px;
+			padding: 0 0 25px;
+		}
+
+		h2{
+			font-size: 28px;
+			line-height: 35px;
+			padding: 0 0 25px;
+		}
+
+		h4{
+			font-size: 20px;
+			line-height: 25px;
+			padding: 12px 0;
+		}
+	}
+
+	.cart-section{
+		.cart-section__content{
+			width: calc(100% - 340px);
+		}
+		.cart-section__result{
+			width: 310px;
+		}
+	}
+
+	.cart-text-16-normal{
+		font-size: 15px;
+	    line-height: 18px;
+	}
+	.cart-text-18-normal{
+		font-size: 16px;
+	    line-height: 20px;
+	}
+}
+
+
+@media (max-width: 1000px){
+	.cart-section{
+		.cart-section__content{
+			width: 100%;
+		    padding: 0 0 10px;
+		}
+		.cart-section__result{
+			width: 100%;
+			margin: 10px 0 0;
+			 .category-content-prev{
+	            display: none;
+	        }
+		}
+		.cart-section__buttons{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		&.cart-section-2{
+			position: relative;
+	    	padding: 0 0 80px;
+			.cart-section__result{
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.cart-page-content{
+		h1{
+			font-size: 30px;
+			line-height: 38px;
+			padding: 0 0 25px;
+		}
+
+		h2{
+			font-size: 26px;
+			line-height: 33px;
+			padding: 0 0 25px;
+		}
+
+		h4{
+			font-size: 18px;
+			line-height: 23px;
+			padding: 12px 0;
+		}
+	}
+}
+
+// @import "_cart-mini"; /* Мини-корзина в шапке*/
+@import "_cart-new";  /* ОФормление товаров в корзине */
+@import "_cart-result"; /* Боковое окошко с итоговыми ценами */
+@import "./form/_index"; 
+@import "./delivery/_index"; /* Блок доставки в корзине */
+@import "./payments/_index"; /* Блок Оплаты в корзине */
+@import "./authorization/_index"; 
+@import "./order/_index"; 
+@import "_suggestions"; 
+// @import "_cart-steps";
+// @import "_cart-step-button";

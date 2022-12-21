@@ -1,0 +1,10 @@
+.news-view{
+	@at-root.news-view__title{
+		font-size: 24px;
+		line-height: 120%;
+	}
+	@at-root.news-view__body{
+		font-size: 16px;
+		line-height: 130%;
+	}
+}

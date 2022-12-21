@@ -1,0 +1,128 @@
+.payment-methods{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    padding: 0 !important;
+    list-style-type: none;
+    li.payment-method__item{
+        list-style: none;
+        padding: 0;
+        width: calc(100% / 2 - 20px);
+        margin: 0 10px 20px 10px;
+    }
+    .logo-payment-box{
+        margin: 0 -10px;
+        .logo-payment-box__item{
+            width: 120px;
+            margin: 10px;
+            }
+    }
+}
+
+.payment-rich-radio{
+    display: block;
+    margin-right: 20px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    input[type="radio"]{
+        vertical-align: top;
+        width: 14px;
+        height: 14px;
+        margin: 0 3px 0 0;
+        & + label {
+            cursor: pointer;
+            margin: 0;
+            padding: 3rem;
+
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 100%;
+
+            color: #38434E;
+
+            background: white;
+            box-shadow: 0 14px 31px rgba(40, 46, 53, 0.05), 0px 1.75302px 3.88168px rgba(40, 46, 53, 0.05);
+            border-radius: 10px;
+            border: 2px solid white;
+            width: 100%;
+        }
+        &:not(checked) {
+            position: absolute;
+            opacity: 0;
+            & + label {
+                position: relative;
+            }
+        }
+        &:checked{
+            opacity: 0;
+            & + label{
+                border: 2px solid $color_brand;
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .rich-radio-body__text{
+        color: $color757575;
+        font-size: 16px;
+        font-family: $familyRegular;
+        font-weight: normal;
+        line-height: 1.2;
+        margin: 10px 0;
+        p{
+            margin: 0 0 10px;
+        }
+        h3{
+            margin: 0 0 10px;
+        }
+    }
+}
+
+@media (max-width: 1240px){
+    .payments-section{
+
+    }
+    .payment-methods{
+        .payment-method__item{
+        }
+        .logo-payment-box{
+            .logo-payment-box__item{
+
+            }
+        }
+    }
+
+    .payment-rich-radio{
+        margin-right: 20px;
+        input[type="radio"]{
+            & + label {
+                font-size: 14px;
+                line-height: 1.1;
+
+            }
+
+        }
+        .rich-radio-body__text{
+            font-size: 14px;
+            line-height: 1.2;
+        }
+    }
+}
+
+@media(max-width: 576px){
+    .payment-rich-radio{
+        margin-right: 20px;
+        input[type="radio"]{
+            & + label {
+                padding: 1rem;
+            }
+
+        }
+        .rich-radio-body__text{
+            font-size: 14px;
+            line-height: 1.2;
+        }
+    }
+}

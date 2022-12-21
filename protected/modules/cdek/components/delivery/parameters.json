@@ -1,0 +1,507 @@
+{
+    "name": "СДЭК",
+    "settings": [
+        {
+            "variable": "account",
+            "name": "Account"
+        },
+        {
+            "variable": "secure_password",
+            "name": "Secure password"
+        },
+        {
+            "variable": "from_location_code",
+            "name": "Код города отправителя"
+        },
+        {
+            "variable": "tariff_code",
+            "name": "Тариф расчета доставки курьером ",
+            "options_list": [
+                {
+                    "value": "7",
+                    "name": "Международный экспресс документы дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "до 5 кг",
+                    "service": "Международный экспресс",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Экспресс-доставка за/из-за границы документов и писем."
+                },
+                {
+                    "value": "8",
+                    "name": "Международный экспресс грузы дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "до 30 кг",
+                    "service": "Международный экспресс",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Экспресс-доставка за/из-за границы грузов и посылок до 30 кг."
+                },
+                {
+                    "value": "136",
+                    "name": "Посылка склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "до 30 кг",
+                    "service": "Посылка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю."
+                },
+                {
+                    "value": "137",
+                    "name": "Посылка склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "до 30 кг",
+                    "service": "Посылка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю."
+                },
+                {
+                    "value": "138",
+                    "name": "Посылка дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-дверь (Д-С)",
+                    "w": "до 30 кг",
+                    "service": "Посылка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю."
+                },
+                {
+                    "value": "139",
+                    "name": "Посылка дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "до 30 кг",
+                    "service": "Посылка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю."
+                },
+                {
+                    "value": "233",
+                    "name": "Экономичная посылка склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "до 50 кг",
+                    "service": "Экономичная посылка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю.Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым."
+                },
+                {
+                    "value": "234",
+                    "name": "Экономичная посылка склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "до 50 кг",
+                    "service": "Экономичная посылка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю.Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым."
+                },
+                {
+                    "value": "291",
+                    "name": "CDEK Express склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "",
+                    "service": "CDEK Express",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Сервис по доставке товаров из-за рубежа в Россию, Украину, Казахстан, Киргизию, Узбекистан с услугами по таможенному оформлению.Предлагается 2 схемы работы:1) клиент доставляет заказ на таможенный пост в России. Мы встречаем, помогаем с таможней и доставляем адресату;2) клиент привозит посылки на один из наших складов за рубежом. Мы перевозим их на таможенный пост в Россию, проводим очистку и доставляем получателю."
+                },
+                {
+                    "value": "293",
+                    "name": "CDEK Express дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "294",
+                    "name": "CDEK Express склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "295",
+                    "name": "CDEK Express дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "366",
+                    "name": "Посылка дверь-постамат",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-постамат (Д-П)",
+                    "w": "до 30 кг",
+                    "service": "Посылка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю."
+                },
+                {
+                    "value": "368",
+                    "name": "Посылка склад-постамат",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-постамат (С-П)",
+                    "w": "до 30 кг",
+                    "service": "Посылка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Услуга экономичной доставки товаров по России для компаний, осуществляющих дистанционную торговлю."
+                },
+                {
+                    "value": "378",
+                    "name": "Экономичная посылка склад-постамат",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-постамат (С-П)",
+                    "w": "до 50 кг",
+                    "service": "Экономичная посылка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Услуга экономичной наземной доставки товаров по России для компаний, осуществляющих дистанционную торговлю.Услуга действует по направлениям из Москвы в подразделения СДЭК, находящиеся за Уралом и в Крым"
+                },
+                {
+                    "value": "243",
+                    "name": "Китайский экспресс",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "245",
+                    "name": "Китайский экспресс",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "246",
+                    "name": "Китайский экспресс",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "247",
+                    "name": "Китайский экспресс",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "1",
+                    "name": "Экспресс лайт дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "до 30 кг",
+                    "service": "Экспресс",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Классическая экспресс-доставка по России документов и грузов до 30 кг."
+                },
+                {
+                    "value": "3",
+                    "name": "Супер-экспресс до 18",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "до 30 кг",
+                    "service": "Срочная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Срочная доставка документов и грузов «из рук в руки» по России к определенному часу."
+                },
+                {
+                    "value": "5",
+                    "name": "Экономичный экспресс склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "",
+                    "service": "Экономичная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Недорогая доставка грузов по России ЖД и автотранспортом (доставка грузов с увеличением сроков)."
+                },
+                {
+                    "value": "10",
+                    "name": "Экспресс лайт склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "до 30 кг",
+                    "service": "Экспресс",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Классическая экспресс-доставка по России документов и грузов."
+                },
+                {
+                    "value": "11",
+                    "name": "Экспресс лайт склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "12",
+                    "name": "Экспресс лайт дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "15",
+                    "name": "Экспресс тяжеловесы склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "от 30 кг",
+                    "service": "Экспресс",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Классическая экспресс-доставка по России грузов."
+                },
+                {
+                    "value": "16",
+                    "name": "Экспресс тяжеловесы склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "17",
+                    "name": "Экспресс тяжеловесы дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "18",
+                    "name": "Экспресс тяжеловесы дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "57",
+                    "name": "Супер-экспресс до 9",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "до 30 кг",
+                    "service": "Срочная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Срочная доставка документов и грузов «из рук в руки» по России к определенному часу (доставка за 1-2 суток)."
+                },
+                {
+                    "value": "58",
+                    "name": "Супер-экспресс до 10",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "59",
+                    "name": "Супер-экспресс до 12",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "60",
+                    "name": "Супер-экспресс до 14",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "61",
+                    "name": "Супер-экспресс до 16",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "62",
+                    "name": "Магистральный экспресс склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "",
+                    "service": "Экономичная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Быстрая экономичная доставка грузов по России"
+                },
+                {
+                    "value": "63",
+                    "name": "Магистральный супер-экспресс склад-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-склад (С-С)",
+                    "w": "",
+                    "service": "Экономичная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Быстрая экономичная доставка грузов к определенному часу"
+                },
+                {
+                    "value": "118",
+                    "name": "Экономичный экспресс дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "Экономичная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Недорогая доставка грузов по России ЖД и автотранспортом (доставка грузов с увеличением сроков)."
+                },
+                {
+                    "value": "119",
+                    "name": "Экономичный экспресс склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "120",
+                    "name": "Экономичный экспресс дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "121",
+                    "name": "Магистральный экспресс дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "Экономичная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Быстрая экономичная доставка грузов по России"
+                },
+                {
+                    "value": "122",
+                    "name": "Магистральный экспресс склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "123",
+                    "name": "Магистральный экспресс дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "124",
+                    "name": "Магистральный супер-экспресс дверь-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "дверь-дверь (Д-Д)",
+                    "w": "",
+                    "service": "Экономичная доставка",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": "Быстрая экономичная доставка грузов к определенному часу"
+                },
+                {
+                    "value": "125",
+                    "name": "Магистральный супер-экспресс склад-дверь",
+                    "name_for_site": "СДЭК (доставим посылку до двери)",
+                    "mode": "склад-дверь (С-Д)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekFormWidget",
+                    "description": ""
+                },
+                {
+                    "value": "126",
+                    "name": "Магистральный супер-экспресс дверь-склад",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-склад (Д-С)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                },
+                {
+                    "value": "361",
+                    "name": "Экспресс лайт дверь-постамат",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "дверь-постамат (Д-П)",
+                    "w": "до 30 кг",
+                    "service": "Экспресс",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": "Классическая экспресс-доставка по России документов и грузов до 30 кг."
+                },
+                {
+                    "value": "363",
+                    "name": "Экспресс лайт склад-постамат",
+                    "name_for_site": "СДЭК (самовывоз из пункта доставки)",
+                    "mode": "склад-постамат (С-П)",
+                    "w": "",
+                    "service": "",
+                    "widget": "application.modules.cdek.widgets.CdekListWidget",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "variable": "is_test",
+            "name": "Среда",
+            "options": [
+                {
+                    "name": "Тестовая",
+                    "value": 1
+                },
+                {
+                    "name": "Боевая",
+                    "value": 0
+                }
+            ]
+        }
+    ]
+}

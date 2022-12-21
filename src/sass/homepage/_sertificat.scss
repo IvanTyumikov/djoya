@@ -1,0 +1,73 @@
+.sertificat{
+    padding: 7rem 0 10rem 0;
+    @media(max-width: 576px){
+        padding: 2rem 0;
+    }
+    &__main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @at-root.sertificat__info{
+            width: 100%;
+            max-width: 542px;
+            margin-right: 2rem;
+            margin-bottom: 3rem;
+            @media(max-width: 767px){
+                margin-right: 0;
+                max-width: unset;
+            }
+            .title{
+
+            }
+            .desc{
+                margin-top: 2.4rem;
+                max-width: 405px;
+                @media(max-width: 767px){
+                    max-width: unset;
+                }
+            }
+            .buts{
+                margin-top: 3.6rem;
+            }
+        }
+        @at-root.sertificat__slider{
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            width: calc(100% - 542px - 2rem);
+            @media(max-width: 991px){
+                width: 100%;
+                margin-top: 4rem;
+            }
+            &.js-sertificat-slider{
+                .slick-list{
+                    margin: 0 -4rem;
+                    @media(max-width: 1780px){
+                        margin: 0 -1.5rem;
+                    }
+                    @media(max-width: 1199px){
+                        margin: 0 -1rem;
+                    }
+                    .slick-track{
+                        .slick-slide{
+                            margin: 0 4rem;
+                            @media(max-width: 1780px){
+                                margin: 0 1.5rem;
+                            }
+                            @media(max-width: 1199px){
+                                margin: 0 1rem;
+                            }
+                            > div{
+
+                            }
+                        }
+                    }
+                }
+            }
+            @at-root.sertificat__img{
+                max-width: 263px;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+//Всплывающе сообщение об успешной отправки формы
+.overlay {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px;
+	padding-bottom: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.75);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.35s ease-in-out;
+	max-height: 100vh;
+	overflow-y: auto;
+	z-index: 300;
+	&.open{
+		opacity: 1;
+		pointer-events: inherit;
+	}
+	@at-root.message-modal {
+		// display: none;
+		background: white;
+		text-align: center;
+		padding: 40px 80px;
+		box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.8s ease-in-out;
+		max-height: 100vh;
+		// overflow-y: auto;
+		// position: absolute;
+		z-index: 1000;
+		&.open{
+			// display: block;
+			position: relative;
+			opacity: 1;
+			pointer-events: inherit;
+			z-index: 1000;
+			.message-modal__content{
+				-webkit-transform: translate(0, 0px);
+				transform: translate(0, 0px);
+				opacity: 1;
+			}
+		}
+		@at-root.message-modal__content{
+			transform: translate(0, -10px);
+			opacity: 0;
+			transition: 0.8s ease-in-out;
+		}
+		@at-root.message-modal__message{
+			color: #6b6b6b;
+			font-size: 16px;
+		}
+		@at-root.message-modal__close{
+			display: inline-block;
+			margin-top: 1rem;
+			height: 35px;
+			line-height: 37px;
+			font-size: 13px;
+			color: #fff;
+			background: #a2a2a2;
+			border-radius: 4px;
+			text-align: center;
+			padding: 0 1.5rem;
+			&:hover, &:focus{
+				color: #fff;
+				background: #6e6e6e;
+			}
+		}
+	}
+}

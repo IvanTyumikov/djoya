@@ -1,0 +1,20 @@
+.order-message-section{
+	.cart-text-18-normal{
+		line-height: 26px;
+	}
+}
+
+.pay-details{
+	font-size: 16px;
+	padding: 0 0 20px;
+	.pay-details__items{
+		padding: 5px 0;
+	}
+	.pay-details__left{
+		width: 95px;
+	}
+	.pay-details__right{
+		width: calc(100% - 95px);
+		padding: 0 0 0 20px;
+	}
+}

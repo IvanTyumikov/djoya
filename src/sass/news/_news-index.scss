@@ -1,0 +1,18 @@
+.news-index{
+	.news__main{
+		width: auto;
+	}
+	.news__row{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		.news__col{
+			width: calc(100% / 2 - 30px);
+			margin: 0 15px;
+			margin-bottom: 3rem;
+			@media(max-width: 767px){
+				width: 100%;
+			}
+		}
+	}
+}

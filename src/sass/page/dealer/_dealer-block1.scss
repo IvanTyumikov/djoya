@@ -1,0 +1,41 @@
+.dealer-block1{
+	padding: 8rem 0 11rem 0;
+	@at-root.dealer-block1__main{
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		@at-root.dealer-block1__col{
+			width: calc(100% / 2 - 30px);
+			margin: 0 15px;
+			@media(max-width: 576px){
+				width: 100%;
+				margin-bottom: 2rem;
+			}
+			.dealer-block1__title{
+				@media(max-width: 1199px){
+					font-size: 30px;
+					line-height: 37px;
+				}
+				@media(max-width: 767px){
+					font-size: 24px;
+					line-height: 28px;
+				}
+			}
+			@at-root.dealer-block1__desc{
+				font-family: $main-font;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 24px;
+				color: #000000;
+				margin-top: 1rem;
+				@media(max-width: 576px){
+					text-align: center;
+					font-size: 18px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}

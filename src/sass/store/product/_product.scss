@@ -1,0 +1,32 @@
+.product {
+  @at-root.product__top {
+    margin-bottom: 2rem;
+  }
+  @at-root.product__main {
+  }
+  @at-root.product__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    width: 100%;
+    @at-root.product__item {
+      width: calc(100% / 3);
+      margin-right: 20px;
+      @media (max-width: 1199px) {
+        width: calc(100% / 3);
+      }
+      @media (max-width: 991px) {
+        width: calc(100% / 2);
+      }
+    }
+    @at-root.product-item_hit {
+      width: calc(100% / 3);
+      @media (max-width: 1199px) {
+        width: calc(100% / 3);
+      }
+      @media (max-width: 991px) {
+        width: calc(100% / 2);
+      }
+    }
+  }
+}

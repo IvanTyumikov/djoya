@@ -1,0 +1,71 @@
+.quest {
+    @at-root.quest__top {
+        margin-bottom: 4rem;
+    }
+    @at-root.quest__main {
+        //max-width: 1000px;
+        @at-root.quest__item {
+        }
+    }
+}
+
+.quest-item {
+    border-bottom: 1px solid #000000;
+    overflow: hidden;
+    &:first-child {
+        border-top: 1px solid #000000;
+    }
+    &.active {
+        .quest-item__head-label {
+            // color: #00978E;
+        }
+        .quest-item__icon {
+            transform: rotate(45deg);
+            svg path {
+                fill: #00978e;
+            }
+        }
+        .quest-item__body {
+            visibility: visible;
+            max-height: 400px;
+            opacity: 1;
+            padding-bottom: 2rem;
+        }
+    }
+    @at-root.quest-item__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 2rem 0;
+        @at-root.quest-item__title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            color: #212121;
+            margin-right: 3rem;
+        }
+        @at-root.quest-item__icon {
+            margin-right: 2rem;
+            transition: 0.3s;
+        }
+    }
+    @at-root.quest-item__body {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #757575;
+
+        visibility: hidden;
+        max-height: 1px;
+        opacity: 0;
+        padding-bottom: 0;
+        transition: 0.3s;
+        p {
+            margin: 0;
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+}

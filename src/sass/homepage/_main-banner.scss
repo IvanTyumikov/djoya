@@ -1,0 +1,93 @@
+.main-banner {
+    margin-bottom: 120px;
+    position: relative;
+    @media screen and (max-width: 768px) {
+        margin-bottom: calc(
+            40px + (120 - 40) * ((100vw - 320px) / (768 - 320))
+        );
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 3;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 30px;
+        min-height: 735px;
+        @media screen and (max-width: 768px) {
+            min-height: calc(
+                350px + (735 - 350) * ((100vw - 320px) / (768 - 320))
+            );
+        }
+        h3 {
+            font-family: 'PD-sb';
+            font-size: 70px;
+            color: #fff;
+            margin: 0 0 20px 0;
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                line-height: 100%;
+                font-size: calc(
+                    30px + (70 - 30) * ((100vw - 320px) / (768 - 320))
+                );
+            }
+        }
+        p {
+            font-family: 'Int-m';
+            font-size: 25px;
+            color: #fff;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                line-height: 100%;
+                font-size: calc(
+                    16px + (25 - 16) * ((100vw - 320px) / (768 - 320))
+                );
+            }
+        }
+        a {
+            font-family: 'Int-m';
+            font-size: 18px;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 8px 15px;
+            width: 100%;
+            max-width: 220px;
+            text-align: center;
+            &:hover {
+                color: #000;
+                background-color: #fff;
+            }
+            @media screen and (max-width: 768px) {
+                text-align: center;
+                font-size: calc(
+                    16px + (18 - 16) * ((100vw - 320px) / (768 - 320))
+                );
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 59px;
+        height: 59px;
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        right: 0;
+        background: url('../images/background-items/ring.svg') no-repeat;
+    }
+}

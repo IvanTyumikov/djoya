@@ -1,0 +1,48 @@
+.delivery-map-item{
+	width: 315px; 
+	background: $colorWhite;
+	padding: 0px 0px 15px 15px;
+	.delivery-map-item__name, .delivery-map-item__mode, .delivery-map-item__phone{
+		text-align: left;
+		color: #7A8086;
+		font-size: 13px;
+		font-family: $familyRegular;
+		line-height: 18px;
+	}
+	.delivery-map-item__name{
+		margin: 5px 0px;
+		padding: 0;
+	}
+	.delivery-map-item__link{
+		color: $color757575;
+		&:hover{
+			color: $color757575;
+		}
+		&.delivery-map-item__link_adress{
+			color: $color212121;
+			font-size: 15px;
+			line-height: 18px;
+			border-bottom: 1px solid rgba(33, 33, 33, .6);
+			&:hover{
+				color: $color006D25;
+			}
+		}
+	}
+	.delivery-map-item__mode{
+		margin: 5px 0px;
+		padding: 0;
+	}
+	.delivery-map-item__phone{
+		color: $color212121;
+		font-size: 15px;
+		line-height: 18px;
+		a{
+			color: $color212121;
+		}
+	}
+	&.delivery-map-item-hover{
+		width: 300px; 
+		border: 1px solid $color757575;
+		padding: 10px 15px;
+	}
+}

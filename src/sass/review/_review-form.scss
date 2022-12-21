@@ -1,0 +1,248 @@
+.review-form{
+	@at-root.review-form__main{
+		max-width: 870px;
+	}
+	.review-form__send{
+		cursor: pointer;
+	}
+	.file-upload{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: #FFFFFF;
+		border: 2px dashed #757575;
+		border-radius: 5px;
+		padding: 6rem;
+		position: relative;
+		z-index: 10;
+		margin-bottom: 2rem;
+		transition: .3s;
+		input[type="file"]{
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			position: absolute;
+			z-index: -10;
+			&:focus + label{
+				outline: 1px solid #0078d7;
+				outline: -webkit-focus-ring-color auto 5px;
+			}
+		}
+		&.focus{
+			outline: 1px solid #0078d7;
+			outline: -webkit-focus-ring-color auto 5px;
+			label{
+
+			}
+		}
+		&.dragover {
+			background-color: #fafafa;
+		}
+		&.add{
+			border: 2px dashed #00c8bc;
+			.file-upload__text{
+				color: #00c8bc;
+			}
+		}
+		&__label{
+			font-family: $main-font;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 23px;
+			color: #212121;
+			margin-bottom: 6rem;
+			margin-top: 2rem;
+			transition: .3s;
+		}
+		&__icon{
+
+		}
+		&__text{
+			text-align: center;
+			line-height: 16px;
+			label{
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.review-form-box{
+	@at-root.review-form-box__header{
+
+	}
+	@at-root.review-form-box__form{
+
+	}
+	.form-group{
+		>label{
+			display: none;
+		}
+		input, textarea{
+			background: #FFFFFF;
+			border: 1px solid #DBDBDB;
+			border-radius: 5px;
+			box-shadow: none;
+
+			font-family: $main-font;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 19px;
+			color: #757575;
+			width: 100%;
+			&:focus{
+				outline: none;
+				box-shadow: none;
+				border: 2px solid #00c8bc;
+			}
+		}
+		textarea{
+			height: 185px;
+		}
+	}
+	.form-bot{
+		.form-captcha{
+			transform: scale(1) translateX(0);
+		}
+	}
+}
+
+.raiting-form{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	@at-root.raiting-form__list{
+		margin-right: 3rem;
+		.raiting-list__item{
+			width: 33px;
+			height: 32px;
+		}
+	}
+	@at-root.raiting-form__value{
+		
+	}
+}
+
+.review-form-warning{
+	margin: 3rem 0;
+	@at-root.review-form-warning__label{
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 23px;
+		color: #212121;
+	}
+	@at-root.review-form-warning__label2{
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 22px;
+		color: #454545;
+		margin-top: 7px;
+	}
+	@at-root.review-form-warning__list{
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 22px;
+		color: #757575;
+	}
+}
+
+.review-order{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 4rem;
+	&__label{
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 23px;
+		color: #212121;
+		margin-bottom: 1.5rem;
+		margin-top: 4rem;
+	}
+	&__field{
+		max-width: 195px;
+		margin-right: 30px;
+		@media(max-width: 576px){
+			margin-right: 0;
+		}
+		.form-group{
+			margin-bottom: 0;
+		}
+	}
+	&__desc{
+		width: calc(100% - 225px);
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 16px;
+		color: #757575;
+		@media(max-width: 576px){
+			width: 100%;
+			margin-top: 1.5rem;
+		}
+	}
+}
+
+.form-button{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	.review-form__send{
+		max-width: 308px;
+		margin-right: 30px;
+		position: relative;
+		@media(max-width: 576px){
+			max-width: unset;
+			margin-right: 0;
+			order: 2;
+		}
+		&.loader{
+			&:before{
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 5px;
+				background: white url('../images/icon/loading.svg') center center no-repeat;
+				border: 1px solid #ccc;
+				background-size: contain;
+				transition: .3s all ease;
+				z-index: 100;
+				opacity: 1;
+			}
+		}
+	}
+	@at-root.form-terms{
+		width: calc(100% - 338px);
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 16px;
+		color: #757575;
+		max-width: 370px;
+		@media(max-width: 576px){
+			width: 100%;
+			margin-bottom: 1.5rem;
+			order: 1;
+		}
+		a{
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 16px;
+			color: #757575;
+			text-decoration: underline;
+		}
+	}
+}

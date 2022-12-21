@@ -1,0 +1,35 @@
+.dealer-interior{
+	padding: 8rem 0;
+	@at-root.dealer-interior__top{
+
+	}
+	@at-root.dealer-interior__main{
+		margin-top: 3rem;
+		&.slick-slider{
+			.slick-list{
+				overflow: visible;
+				margin-right: -30px;
+				@media(max-width: 576px){
+					margin-right: 30px;
+				}
+				.slick-track{
+					width: calc(100% + 30px);
+					margin-right: -30px;
+				}
+			}
+			.slick-arrow{
+				top: -95px;
+			}
+			.slick-prev{
+				left: unset;
+				right: 60px;
+			}
+			.slick-next{
+
+			}
+		}
+		@at-root.dealer-interior__item{
+			margin-right: 30px;
+		}
+	}
+}

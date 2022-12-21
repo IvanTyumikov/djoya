@@ -1,0 +1,32 @@
+.tehnic {
+  position: relative;
+  margin-bottom: 110px;
+  .kran {
+    position: absolute;
+    left: 0;
+    bottom: -210px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-top: 50px;
+      align-self: flex-end;
+    }
+    h2 {
+      font-family: 'PD-m';
+      font-size: 50px;
+      line-height: normal;
+      strong {
+        font-family: 'PD-b';
+      }
+    }
+    p {
+      font-family: 'Int-r';
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+}

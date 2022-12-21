@@ -1,0 +1,91 @@
+.lk-order{
+    .lk-order__header{
+        display: table;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        background: #E2E2E2;
+        .lk-order__column{
+            color: #000;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        &:after {
+            display: table;
+            clear: both;
+            content: ''
+        }
+    }
+    .lk-order__item {
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        &:after {
+            display: table;
+            clear: both;
+            content: '';
+        }
+        &:nth-child(even){
+            // background: rgba(0, 0, 0, 0.1);
+        }
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+    }
+    .lk-order__column{
+        display: table-cell;
+        width: 25%;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 12px 20px;
+        &.lk-order__column-date{
+            width: 25%;
+        }
+        &.lk-order__column-name{
+            width: 50%;
+        }
+        a{
+            color: rgba(0, 0, 0, 0.5);
+        }
+        span{
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 16px;
+            @media (min-width: 640px){
+                display: none;
+            }
+        }
+    }
+    .lk-order__box{
+        .empty{
+            display: block;
+            padding: 20px 0px;
+        }
+    }
+}
+@media (max-width: 640px){
+    .lk-order{
+        .lk-order__header{
+            display: none;
+        }
+        .lk-order__item {
+            display: block;
+            padding: 10px;
+        }
+        .lk-order__column{
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            padding: 7px 0px;
+            &.lk-order__column-date{
+                width: 100%;
+            }
+            &.lk-order__column-name{
+                width: 100%;
+            }
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+}

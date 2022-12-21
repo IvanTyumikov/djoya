@@ -1,0 +1,51 @@
+/* Радио Переключатели (Я новый покупатель/Я уже зарегистрирован) */
+.choice-authorization{
+	padding: 0 0 25px;
+}
+.radio-type-template{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	input{
+		position: absolute; opacity: 0;
+		& + label{
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+			width: auto;
+			height: 45px;
+			color: $color212121;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 19px;
+			text-align: center;
+			line-height: 1.0;
+			padding: 0 22px;
+			margin: 0;
+			border: 1px solid $colorBorder;
+			cursor: pointer;
+		}
+		&:checked{
+			& + label{
+				color: $colorFFFFFF;
+				background: $color6D7280;
+				border-color: $color6D7280;
+			}
+		}
+	}
+	&:first-child{
+		input{
+			& + label{
+				@include border-radius(5px 0 0 5px);
+			}
+		}
+	}
+	&:last-child{
+		input{
+			& + label{
+				@include border-radius(0 5px 5px 0);
+			}
+		}
+	}
+}

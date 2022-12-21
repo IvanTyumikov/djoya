@@ -1,0 +1,17 @@
+$fontUbuntu: 'Ubuntu', sans-serif;;
+
+$familyRegular: $fontUbuntu;
+$familyBold: $fontUbuntu;
+$familyBlack: $fontUbuntu;
+
+@import "_config";
+@import "_config-flex";
+@import "_color";
+
+.back-bord{
+	background: $colorWhite;
+	border: 1px solid $colorBorder;
+	@include border-radius(5px);
+}
+
+@import "_button";

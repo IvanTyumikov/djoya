@@ -1,0 +1,240 @@
+.delivery-nav{
+	height: 40px;
+	margin: 0 0 20px;
+	.delivery-nav__item{
+		height: 100%;
+		&.delivery-search-input{
+			width: calc(100% - 225px);
+		}
+		&.delivery-nav__template{
+			width: 79px;
+		}
+	}
+	&.delivery-nav-noTemplate{
+		.delivery-nav__item{
+			&.delivery-search-input{
+				width: 100%;
+			}
+			&.delivery-nav__template{
+				display: none;
+			}
+		}
+	}
+}
+
+/* Поиск пунтка выдачи */
+.delivery-search-input{
+	width: 100%;
+	height: 100%;
+	@include flexbox();
+	@include align-items(center);
+	input{
+		width: 100%;
+		height: 100%;
+		color: $color757575;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: normal;
+		border: none;
+		border-bottom: 2px solid $color00A44B;
+		padding: 0 30px;
+		background: $colorWhite;
+		@include border-radius(0 !important);
+		@include box-shadow(none);
+		&::-webkit-input-placeholder{
+			color: $color757575;
+		}
+		&::-moz-placeholder{
+			color: $color757575;
+		}
+		&:-moz-placeholder{
+			color: $color757575;
+		}
+		&:-ms-input-placeholder{
+			color: $color757575;
+		}
+		&:hover,&:focus,&:active{
+			outline: 0;
+			color: $color454545;
+			border-color: $color00A44B;
+			background: $colorWhite;
+			@include box-shadow(none);
+		}
+	}
+	.input-group-btn{
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 30px;
+		padding: 0;
+		height: 100%;
+		button{
+			// width: 100%;
+			height: 100%;
+			background: transparent;
+			border: none;
+			padding: 0;
+			background: transparent;
+			@include border-radius(0 !important);
+			@include transition(transform .3s ease);
+			svg{
+				width: 17px;
+				height: 40px;
+				@include transition(.3s);
+				path{
+					fill: $color757575;
+				}
+			}
+			&:hover,&:focus,&:active{
+				outline: 0;
+				@include box-shadow(none);
+				svg{
+					@include transform(translateY(-1px));
+					path{
+						fill: $color00A44B;
+					}
+				}
+			}
+		}
+	}
+}
+
+.delivery-nav-template{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	.delivery-nav-template__item{
+		width: 40px;
+		height: 100%;
+		background: $colorWhite;
+		border: 2px solid $color00A44B;
+		a{
+			width: 100%;
+			height: 100%;
+		}
+		svg{
+			width: 22px;
+			path{
+				fill: $color00A44B;
+			}
+			line{
+				stroke: $color00A44B;
+			}
+		}
+		&:last-child{
+			margin: 0 0 0 -1px;
+		}
+		&:hover, &:focus, &:active{
+			// background: rgba($color00A44B, .05);
+			svg{
+				width: 20px;
+				path{
+					fill: darken($color00A44B, 10);
+				}
+				line{
+					stroke: darken($color00A44B, 10);
+				}
+			}
+		}
+		&.active{
+			background: $color00A44B;
+			svg{
+				path{
+					fill: $colorWhite;
+				}
+				line{
+					stroke: $colorWhite;
+				}
+			}
+		}
+	}
+}
+
+.js-search-jconpagefilter{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	@include flexbox();
+	@include align-items(center);
+	.js-search-jconpagefilter__close{
+		position: absolute;
+	    z-index: 12;
+	    top: 0;
+	    right: 0;
+	    width: 30px;
+	    height: 100%;
+	    padding: 0px 5px 0 10px;
+		opacity: 0;
+		pointer-events: none;
+		cursor: pointer;
+	     -webkit-appearance: listbox;
+		svg{
+			pointer-events: none;
+			width: 100%;
+			height: 40px;
+			path{
+				fill: $color03A300;
+			}
+		}
+		&.active{
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+}
+
+@media (max-width: 1240px){
+	.delivery-nav{
+		height: 40px;
+		margin: 0 0 18px;
+		.delivery-nav__item{
+			&.delivery-search-input{
+				width: calc(100% - 140px);
+			}
+		}
+		&.delivery-nav-noTemplate{
+			.delivery-nav__item{
+				&.delivery-search-input{
+					width: 100%;
+				}
+			}
+		}
+	}
+	/* Поиск пунтка выдачи */
+	.delivery-search-input{
+		input{
+			font-size: 15px;
+			line-height: 17px;
+			padding: 0 30px;
+		}
+		.input-group-btn{
+			width: 30px;
+			button{
+				svg{
+					width: 15px;
+					height: 40px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.delivery-nav{
+		.delivery-nav__item{
+			&.delivery-search-input{
+				width: calc(100% - 100px);
+			}
+		}
+		&.delivery-nav-noTemplate{
+			.delivery-nav__item{
+				&.delivery-search-input{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

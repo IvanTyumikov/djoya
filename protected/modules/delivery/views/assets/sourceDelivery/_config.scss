@@ -1,0 +1,144 @@
+@mixin fontface($name_font, $src) {
+  @font-face {
+      font-family: quote($name_font);
+      font-display: auto;
+      src: url(quote("../fonts/" + $name_font + ".eot")); 
+      src: url(quote("../fonts/" + $src + ".eot?#iefix")) format("embedded-opentype"), 
+      url(quote("../fonts/" + $src + ".woff")) format("woff"),
+      url(quote("../fonts/" + $src + ".woff2")) format("woff2"),
+      url(quote("../fonts/" + $src + ".ttf")) format("truetype");
+  }
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transform($translate) {
+    -webkit-transform: $translate;
+       -moz-transform: $translate;
+        -ms-transform: $translate;
+         -o-transform: $translate;
+            transform: $translate;
+}
+@mixin transition-property($property){
+    -webkit-transition-property: $property;
+       -moz-transition-property: $property;
+        -ms-transition-property: $property;
+         -o-transition-property: $property;
+            transition-property: $property;
+}
+@mixin transition($i){
+    -webkit-transition: $i;
+       -moz-transition: $i;
+        -ms-transition: $i;
+         -o-transition: $i;
+            transition: $i;
+}
+@mixin transition_2($i, $j){
+    -webkit-transition: $i, $j;
+       -moz-transition: $i, $j;
+        -ms-transition: $i, $j;
+         -o-transition: $i, $j;
+            transition: $i, $j;
+}
+@mixin transition_3($i, $j, $k){
+    -webkit-transition: $i, $j, $k;
+       -moz-transition: $i, $j, $k;
+        -ms-transition: $i, $j, $k;
+         -o-transition: $i, $j, $k;
+            transition: $i, $j, $k;
+}
+@mixin transition-duration($i){
+    -webkit-transition-duration: $i;
+       -moz-transition-duration: $i;
+        -ms-transition-duration: $i;
+         -o-transition-duration: $i;
+            transition-duration: $i;
+}
+@mixin transition-delay($i){
+    -webkit-transition-delay: $i;
+       -moz-transition-delay: $i;
+        -ms-transition-delay: $i;
+         -o-transition-delay: $i;
+            transition-delay: $i;
+}
+@mixin background-size($i){
+    -webkit-background-size: $i;
+       -moz-background-size: $i;
+        -ms-background-size: $i;
+         -o-background-size: $i;
+            background-size: $i;
+}
+@mixin box-shadow($i){
+    -webkit-box-shadow: $i;
+       -moz-box-shadow: $i;
+        -ms-box-shadow: $i;
+         -o-box-shadow: $i;
+            box-shadow: $i;
+}
+
+@mixin flexbox() {
+  display: -webkit-flex;
+   display: -webkit-box;
+   display: -ms-flexbox;
+      display: -moz-box;
+          display: flex;
+}
+@mixin filter($i){
+    -webkit-filter: $i;
+       -moz-filter: $i;
+        -ms-filter: $i;
+         -o-filter: $i;
+            filter: $i;
+}
+@mixin animation($i){
+    -webkit-animation: $i;
+       -moz-animation: $i;
+        -ms-animation: $i;
+         -o-animation: $i;
+            animation: $i;
+}
+
+@mixin keyframes($name) {
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin background-gradient($orientation, $fromColor, $toColor, $start, $end) {
+  background: $fromColor;
+  background: -moz-linear-gradient($orientation, $fromColor $start, $toColor $end);
+  background: -webkit-linear-gradient($orientation, $fromColor $start, $toColor $end);
+  background: -o-linear-gradient($orientation, $fromColor $start, $toColor $end);
+  background: -ms-linear-gradient($orientation, $fromColor $start, $toColor $end);
+  @if $orientation == 'left' {
+    background: -webkit-gradient(left top, right top, color-stop($start, $fromColor), color-stop($end, $toColor));
+    background: linear-gradient(to right, $fromColor $start, $toColor $end);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+  }
+  @if $orientation == 'top' {
+    background: -webkit-gradient(left top, left bottom, color-stop($start, $fromColor), color-stop($end, $toColor));
+    background: linear-gradient(to bottom, $fromColor $start, $toColor $end);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+  }
+  @if $orientation == '-45deg' {
+    background: -webkit-gradient(left top, right bottom, color-stop($start, $fromColor), color-stop($end, $toColor));
+    background: linear-gradient(135deg, $fromColor $start, $toColor $end);
+  }
+  @if $orientation == '45deg' {
+    background: -webkit-gradient(left bottom, right top, color-stop($start, $fromColor), color-stop($end, $toColor));
+    background: linear-gradient(45deg, $fromColor $start, $toColor $end);
+  }
+}

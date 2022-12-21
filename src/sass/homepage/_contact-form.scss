@@ -1,0 +1,101 @@
+.contact-form__wrapper {
+  background: #ededed;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    padding: calc(20px + (30 - 20) * ((100vw - 320px) / 768));
+  }
+}
+
+.contact-form__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 970px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.cf-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+  max-width: 365px;
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.cf-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  line-height: normal;
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    font-size: calc(22px + (40 - 22) * ((100vw - 320px) / 768));
+    text-align: center;
+  }
+}
+
+.cf-subtitle {
+  font-size: 16px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.cf-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 570px;
+}
+
+.cf-blocks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cf-phone {
+  font-family: 'PD-m';
+  background: #ffffff;
+  border: 1px solid #000000;
+  padding: 9px 15px;
+  width: 100%;
+  max-width: 350px;
+  margin-right: 30px;
+  font-size: 16px;
+  @media screen and (max-width: 500px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.cf-send {
+  display: flex;
+  width: 100%;
+  max-width: 190px;
+  background: #000000;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 7px;
+}
+
+.cf-note {
+  font-size: 14px;
+  color: #a0a0a0;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}

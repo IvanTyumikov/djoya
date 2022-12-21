@@ -1,0 +1,52 @@
+.request{
+	background: #353b41;
+	&.request_green{
+		background: #008A82;
+		.request__link-modal{
+			max-width: 250px;
+		}
+		.green{
+			color: #00FFF0;
+		}
+	}
+	@at-root.request__main{
+		display: flex;
+		align-items: center;
+		padding: 3rem 0;
+		.btn{
+			white-space: nowrap;
+		}
+		@media(max-width: 576px){
+			flex-direction: column;
+		}
+		@at-root.request__desc{
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 111.5%;
+			color: white;
+			width: calc(100% - 180px);
+			margin-right: 3rem;
+			@media(max-width: 991px){
+				font-size: 24px;
+			}
+			@media(max-width: 767px){
+				font-size: 18px;
+			}
+			@media(max-width: 576px){
+				text-align: center;
+				margin-right: 0;
+				width: 100%;
+			}
+			.blue{
+				color: #00D9CC;
+			}
+		}
+		@at-root.request__link-modal{
+			max-width: 180px;
+			white-space: nowrap;
+			@media(max-width: 576px){
+				margin-top: 2rem;
+			}
+		}
+	}
+}

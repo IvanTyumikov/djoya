@@ -1,0 +1,72 @@
+/* 
+	Переменные параметров оформления сайта 
+*/
+// цвета
+$color_warn: #CF2034;
+$color_brand: #00978E;
+$color_border: #D9DDE8;
+$color_input_txt: #38434E;
+$color_txt: #000;
+
+$main-color: #000;
+
+// шрифты
+$main-font: 'PD-r';
+$addit-font: 'PD-m';
+
+/* 
+	Миксины 
+*/
+@mixin flexbox($flex, $justify: flex-start, $align: flex-start) {
+	display: $flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin media($max-width) {
+	@media(max-width: $max-width){
+		@content;
+	}
+}
+
+@mixin flex($width: 100%) {
+	max-width: $width;
+	flex: 0 0 $width;
+}
+
+// псевдоэлемент
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+// плавная поочередная анимация для мобильного меню
+@mixin transition {
+	@for $i from 1 through 50 {
+		&:nth-child(#{$i}) {
+			transition: transform 1s #{$i * .08}s cubic-bezier(.29,1.4,.44,.96);
+		}
+	}
+}
+
+// font style - font-size, font-weight, color
+@mixin font($size, $color, $weight: normal){
+	font-size: $size; 
+	color: $color;
+	font-weight: $weight;  
+}
+
+//fonts
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), 
+	        url('#{$file-path}.woff') format('woff'), 
+	        url('#{$file-path}.ttf') format('truetype'), 
+	        url('#{$file-path}.otf') format('opentype');
+    }
+}

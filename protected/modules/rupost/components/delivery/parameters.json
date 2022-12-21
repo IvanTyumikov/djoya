@@ -1,0 +1,381 @@
+{
+  "name": "Почта России",
+  "settings": [
+    {
+      "variable": "token",
+      "name": "Токен авторизации"
+    },
+    {
+      "variable": "key",
+      "name": "Ключ авторизации"
+    },
+    {
+      "variable": "login",
+      "name": "Логин"
+    },
+    {
+      "variable": "password",
+      "name": "Пароль"
+    },
+    {
+      "variable": "tariffs",
+      "name": "Тарификатор Почты России",
+      "options_list": [
+        {
+          "value": 4030,
+          "name": "Посылка нестандартная",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 27030,
+          "name": "Посылка стандарт",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 27020,
+          "name": "Посылка стандарт с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 27040,
+          "name": "Посылка стандарт с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment": true,
+          "insr_value": true
+        },
+        {
+          "value": 29030,
+          "name": "Посылка экспресс",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 29020,
+          "name": "Посылка экспресс с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 29040,
+          "name": "Посылка экспресс с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 28030,
+          "name": "Посылка курьер EMS",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 28020,
+          "name": "Посылка курьер EMS с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 28040,
+          "name": "Посылка курьер EMS с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 4020,
+          "name": "Посылка нестандартная с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 4040,
+          "name": "Посылка нестандартная с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 47030,
+          "name": "Посылка 1 класса",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 47020,
+          "name": "Посылка 1 класса с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 47040,
+          "name": "Посылка 1 класса с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 23030,
+          "name": "Посылка онлайн обыкновенная",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 23020,
+          "name": "Посылка онлайн с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 23040,
+          "name": "Посылка онлайн с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 24030,
+          "name": "Курьер онлайн обыкновенный",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 24020,
+          "name": "Курьер онлайн с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 24040,
+          "name": "Курьер онлайн с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 30030,
+          "name": "Бизнес курьер",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 30020,
+          "name": "Бизнес курьер с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 31030,
+          "name": "Бизнес курьер экспресс",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 31020,
+          "name": "Бизнес курьер экспресс с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 3000,
+          "name": "Бандероль простая",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 3010,
+          "name": "Бандероль заказная",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 3020,
+          "name": "Бандероль с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 3040,
+          "name": "Бандероль с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 16010,
+          "name": "Бандероль 1 класса заказная",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 16020,
+          "name": "Бандероль 1 класса с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 16040,
+          "name": "Бандероль 1 класса с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 7030,
+          "name": "EMS",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 7020,
+          "name": "EMS с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 7040,
+          "name": "EMS с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 34030,
+          "name": "EMS оптимальное",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 34020,
+          "name": "EMS оптимальное с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 34040,
+          "name": "EMS оптимальное с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 41030,
+          "name": "EMS РТ",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 41020,
+          "name": "EMS РТ с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 41040,
+          "name": "EMS РТ с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 3001,
+          "name": "Бандероль простая",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 3011,
+          "name": "Бандероль заказная",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 4031,
+          "name": "Посылка стандарт",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 4021,
+          "name": "Посылка стандарт с объявленной ценностью",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "insr_value": true
+        },
+        {
+          "value": 4041,
+          "name": "Посылка стандарт с объявленной ценностью и наложенным платежом",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget",
+          "compulsory_payment":  true,
+          "insr_value": true
+        },
+        {
+          "value": 7031,
+          "name": "EMS обыкновенное",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 5001,
+          "name": "Мелкий пакет простой",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 5011,
+          "name": "Мелкий пакет заказной",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 9001,
+          "name": "Мешок М простой",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        },
+        {
+          "value": 9011,
+          "name": "Мешок М заказной",
+          "widget": "application.modules.rupost.widgets.RupostFormWidget"
+        }
+      ]
+    },
+    {
+      "variable": "index_from",
+      "name": "Индекс отправителя"
+    },
+    {
+      "variable": "sending_package",
+      "name": "Вид отправления",
+      "options": [
+        {
+          "value": 0,
+          "name": "Не определено"
+        },
+        {
+          "value": 10,
+          "name": "Коробка S"
+        },
+        {
+          "value": 11,
+          "name": "Пластиковый пакет S"
+        },
+        {
+          "value": 12,
+          "name": "Пузырьковый конверт S"
+        },
+        {
+          "value": 20,
+          "name": "Коробка M"
+        },
+        {
+          "value": 21,
+          "name": "Пластиковый пакет M"
+        },
+        {
+          "value": 22,
+          "name": "Пузырьковый конверт M"
+        },
+        {
+          "value": 30,
+          "name": "Коробка L"
+        },
+        {
+          "value": 31,
+          "name": "Пластиковый пакет L"
+        },
+        {
+          "value": 40,
+          "name": "Коробка XL"
+        },
+        {
+          "value": 41,
+          "name": "Пластиковый пакет XL"
+        }
+      ]
+    },
+    {
+      "variable": "weight",
+      "name": "Средний вес (в г.)"
+    }
+  ]
+}

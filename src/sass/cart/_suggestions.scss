@@ -1,0 +1,39 @@
+.suggestions-suggestions strong {
+    font-weight: normal;
+    color: $color00A44B !important;
+}
+.suggestions-addon{
+    display: none !important;
+}
+.suggestions-constraints {
+    li {
+    }
+}
+.suggestions-suggestions{
+    width: 100% !important;
+    left: 0 !important;
+    padding: 6px 12px;
+    border-color: $colorBorder !important;
+    font-family: 'Int-r';
+    @include border-radius(5px);
+}
+/**
+* Контейнер для одной подсказки
+*/
+.suggestions-wrapper{
+    margin: 5px 0 0;
+    a{
+        display: none !important;
+    }
+}
+
+.suggestions-suggestion {
+    padding: 6px 12px;
+    overflow: hidden;
+}
+
+@media (max-width: 1000px){
+    .suggestions-subtext_label {
+        margin: 0 0 0 10px;
+    }
+}

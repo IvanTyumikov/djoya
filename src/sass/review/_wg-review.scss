@@ -1,0 +1,147 @@
+.wg-review{
+	margin-bottom: 9rem;
+	@at-root.wg-review__main{
+		&.slick-slider{
+			.slick-list{
+				.slick-track{
+					.slick-slide{
+						display: flex !important;
+					}
+				}
+			}
+			.slick-arrow{
+				top: unset;
+				bottom: 40px;
+			}
+			.slick-prev{
+				left: 350px;
+			}
+			.slick-next{
+				right: unset;
+				left: 410px;
+			}
+		}
+		@at-root.wg-review__item{
+
+		}
+	}
+}
+
+.wg-review-item{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	position: relative;
+	@at-root.wg-review-item__info{
+		width: calc(100% - 482px);
+		@media(max-width: 991px){
+			width: 100%;
+		}
+	}
+	@at-root.wg-review-item__img{
+		max-width: 482px;
+		width: 100%;
+	}
+	@at-root.wg-review-item__count{
+		position: absolute;
+		left: 0;
+		bottom: 50px;
+	}
+}
+
+.wg-review-info{
+	padding-right: 10rem;
+	@media(max-width: 576px){
+		padding-right: 0;
+	}
+	@at-root.wg-review-info__name{
+		display: flex;
+		align-items: center;
+		@at-root.wg-review-info__avatar{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 73px;
+			height: 73px;
+			border-radius: 50%;
+		}
+		@at-root.wg-review-info__name-wrap{
+			margin-left: 3rem;
+			@at-root.wg-review-info__name-txt{
+				font-family: $main-font;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 24px;
+				color: #212121;
+				@media(max-width: 576px){
+					font-size: 18px;
+					line-height: 22px;
+				}
+			}
+			@at-root.wg-review-info__name-desc{
+				font-family: $main-font;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 22px;
+				color: #757575;
+				@media(max-width: 576px){
+					font-size: 16px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+	@at-root.wg-review-info__title{
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 29px;
+		color: #212121;
+		margin-top: 2rem;
+	}
+	@at-root.wg-review-info__desc{
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 22px;
+		color: #757575;
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+		@media(max-width: 576px){
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}
+
+.wg-review-count{
+	display: inline-flex;
+	align-items: center;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	color: #000000;
+	&__current{
+
+	}
+	&__total{
+		display: inline-flex;
+		align-items: center;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 100px;
+			height: 2px;
+			background: #000;
+			margin-bottom: 1px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}

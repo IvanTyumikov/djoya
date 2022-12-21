@@ -1,0 +1,177 @@
+.main-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    // padding: 0 15px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: calc(40px + (120 - 40) * ((100vw - 320px) / 768));
+    }
+    .slick-list {
+        width: 100%;
+    }
+    &__wrapper {
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            width: 58px;
+            height: 58px;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: -20px;
+            background: url('../images/background-items/necklace.svg') no-repeat;
+        }
+    }
+}
+
+.main-review h2 {
+    font-family: 'PD-sb';
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+
+.main-review__list {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+    .slick-list {
+        margin: 0 -15px;
+    }
+    @media screen and (max-width: 1360px) {
+        justify-content: center;
+    }
+}
+
+.main-review__list .slick-dots {
+    bottom: -100px;
+}
+
+.main-review__list .slick-dots li {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.main-review__list .slick-dots li.slick-active {
+    background-color: #000;
+    button {
+        background-color: #000;
+    }
+}
+
+.slick-dots li button::before {
+    content: '';
+}
+
+.main-review__item {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    margin: 0 15px;
+    @media screen and (max-width: 1360px) {
+        max-width: none;
+    }
+    @media screen and (max-width: 768px) {
+        margin: 0;
+    }
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.review-avatar {
+    margin-bottom: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.review-rating {
+    margin-bottom: 22px;
+}
+
+.review-name {
+    font-family: 'Int-m';
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-product {
+    font-family: 'Int-b';
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-family: 'Int-m';
+    font-size: 18px;
+    text-align: center;
+}
+
+.review-more {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.main-review__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 400px) {
+        flex-direction: column;
+    }
+}
+
+.review-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 52px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px 15px;
+    font-family: 'Int-m';
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+}
+
+.review-all:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+}
+
+.review-send {
+    width: 160px;
+    background: #000000;
+    border: 1px solid #000000;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.review-send:hover {
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+}

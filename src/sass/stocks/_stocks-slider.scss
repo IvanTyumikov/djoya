@@ -1,0 +1,22 @@
+.stocks-slider{
+	.slick-list{
+		.slick-track{
+			display: flex;
+			// margin: 0 -15px;
+			.slick-slide{
+				width: calc(100% / 2 - 30px);
+				margin: 0 15px;
+			}
+		}
+	}
+	.slick-arrow{
+		top: -45px;
+	}
+	.slick-prev{
+		left: unset;
+		right: 70px;
+	}
+	.slick-next{
+		right: 10px;
+	}
+}

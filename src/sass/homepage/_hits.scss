@@ -1,0 +1,38 @@
+.hits-title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    @media screen and (max-width: 500px) {
+        margin-bottom: 0;
+    }
+    h2 {
+        font-family: 'PD-m';
+        font-size: 3.5rem;
+        margin: 0 25px 0 0;
+        line-height: normal;
+        @media screen and (max-width: 500px) {
+            font-size: 2rem;
+        }
+    }
+    a {
+        border-bottom: 1px solid #333333;
+        color: #333333;
+        margin-bottom: 5px;
+        @media screen and (max-width: 500px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.hits-list {
+    display: flex;
+    padding-right: 15px;
+    @media screen and (max-width: 768px) {
+        .product-item {
+            &:last-child {
+                margin-right: 0;
+            }
+            // margin-right: 0;
+        }
+    }
+}

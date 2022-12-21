@@ -1,0 +1,275 @@
+.lk-content{
+	width: 100%;
+	overflow: hidden;
+	padding: 0px 0px 60px;
+	h1{
+		padding: 5px 0 20px;
+		font-size: 32px;
+	}
+	&.lk-content-form{
+		padding: 60px 0;
+	}
+}
+
+.lk-box{
+	margin: 20px 0px 0px;
+	.lk-box__menu{
+		position: relative;
+	}
+	.lk-box__content{
+		padding: 30px 20px;
+		// border: 1px solid rgba(0, 0, 0, 0.1);
+		h3{
+			color: #414141;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 1.3;
+			text-transform: uppercase;
+			margin: 0px 0 25px;
+			padding: 0;
+		}
+		h4{
+			color: #414141;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 1.3;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 15px 0;
+		}
+	}
+}
+
+.lk-menu{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+	li{
+		position: relative;
+		height: 100%;
+		border: 1px solid #D9D9D9;
+		border-right: none;
+		margin: 0 0 -1px 0;
+		padding: 0 30px;
+		a{
+			display: flex;
+			align-items: center;
+			height: 100%;
+			color: #212121;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			transition: all .3s linear;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			opacity: 0;
+			background: $link-color;
+			transition: all .3s linear;
+		}
+		&:last-child{
+			border-right: 1px solid #D9D9D9;
+		}
+		&:hover{
+			a{
+				color: $link-color;
+			}
+		}
+		&.active{
+			background: $link-color;
+			a{
+				color: #fff;
+			}
+			&:after{
+				height: 3px;
+				opacity: 1;
+			}
+		}
+	}
+	&:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+
+@media (max-width: 1240px){
+	.lk-content{
+		padding: 0px 0px 50px;
+		h1{
+			padding: 5px 0 20px;
+			font-size: 30px;
+		}
+	}
+	.lk-box{
+		.lk-box__content{
+			padding: 40px 30px;
+			h3{
+				font-size: 15px;
+				margin: -10px 0 30px;
+				padding: 0;
+			}
+			h4{
+				font-size: 15px;
+				margin: 0;
+				padding: 15px 0;
+			}
+		}
+	}
+	.lk-menu{
+		li{
+			// padding: 0px 30px 0px 0px;
+			padding: 12px 12px 10px;
+			a{
+				font-size: 16px;
+			}
+			&.active{
+				background: $link-color;
+				border-color: $link-color;
+				a{
+					color: $color-white;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px){
+	.lk-content{
+		padding: 0px 0px 45px;
+		h1{
+			padding: 5px 0 20px;
+			font-size: 28px;
+		}
+	}
+	.lk-box{
+		.lk-box__content{
+			padding: 40px 20px;
+			h3{
+				font-size: 14px;
+				margin: 0px 0 20px;
+				padding: 0;
+			}
+			h4{
+				font-size: 14px;
+				margin: 0;
+				padding: 15px 0;
+			}
+		}
+	}
+	.lk-menu{
+		li{
+			// padding: 0px 25px 0px 0px;
+			padding: 8px 10px 8px;
+			a{
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.lk-content{
+		padding: 0px 0px 40px;
+		h1{
+			padding: 5px 0 20px;
+			font-size: 26px;
+		}
+	}
+	.lk-box{
+		.lk-box__content{
+			padding: 30px 20px;
+			h3{
+				font-size: 13px;
+				margin: 0px 0 20px;
+				padding: 0;
+			}
+			h4{
+				font-size: 13px;
+				margin: 0;
+				padding: 15px 0;
+			}
+		}
+	}
+	.lk-user-info{
+		.lk-user-info__heading{
+			display: inline-block;
+			vertical-align: top;
+		}
+		.lk-user-info__body{
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	.lk-menu{
+		li{
+			// padding: 0px 20px 10px 0px;
+			a{
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.lk-content{
+		padding: 0px 0px 40px;
+		h1{
+			padding: 5px 0 20px;
+			font-size: 24px;
+		}
+	}
+	.lk-box{
+		.lk-box__content{
+			padding: 30px 15px;
+		}
+	}
+	.lk-menu{
+		display: table;
+		width: 100%;
+		li{
+			float: none;
+			display: table-cell;
+			text-align: center;
+			a{
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.lk-content{
+		padding: 0px 0px 30px;
+		h1{
+			padding: 5px 0 20px;
+			font-size: 24px;
+		}
+	}
+	.lk-menu{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		margin: 0 0 20px;
+		li{
+			width: 100%;;
+			float: none;
+			display: block;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+		}
+	}
+}

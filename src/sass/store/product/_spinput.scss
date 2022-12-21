@@ -1,0 +1,80 @@
+.spinput{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 150px;
+	height: 45px;
+	border: 1px solid #D9DDE8;
+	border-radius: 0;
+	font-size: 14px;
+	&-new {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__minus{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 30px;
+		min-width: 30px;
+		transition: .3s;
+		position: relative;
+		width: auto;
+		cursor: pointer;
+		border: 1px solid #000000;
+		&:before{
+			transition: .3s;
+			font-size: 200%;
+			color: #000;
+			content: '\2212';
+		}
+		&:hover{
+		}
+		&:hover:before{
+		}
+	}
+	&__value{
+		margin: 0;
+		width: 80px;
+		height: 30px;
+		background-color: transparent;
+		vertical-align: baseline;
+		border: none;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 100%;
+		text-align: center;
+		color: #000;
+		border: 1px solid #000000;
+		border-left: none;
+		border-right: 0;
+		&:hover, &:focus, &:active{
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+	&__plus{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 30px;
+		min-width: 30px;
+		transition: .3s;
+		position: relative;
+		width: auto;
+		cursor: pointer;
+		border: 1px solid #000000;
+		&:before{
+			content: '\2b';
+			font-size: 200%;
+			color: #000;
+			transition: .3s;
+		}
+		&:hover{
+		}
+		&:hover:before{
+		}
+	}
+}

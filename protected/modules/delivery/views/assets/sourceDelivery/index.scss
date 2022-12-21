@@ -1,0 +1,23 @@
+$colorWhite: #FFFFFF;
+$colorBorder: #D9DDE8;
+$colorF2F5F8: #F2F5F8;
+$color03A300: #03A300;
+$color00A44B: #00A44B;
+$color006D25: #006D25;
+$color212121: #212121;
+$colorFFFFFF: #FFFFFF;
+$color757575: #757575;
+$colorCF2034: #CF2034;
+$color6D7280: #6D7280;
+$colorEEF2FB: #EEF2FB;
+
+
+$familyRegular: 'Ubuntu', sans-serif;
+$familyBold: 'Ubuntu', sans-serif;
+$familyBlack: 'Ubuntu', sans-serif;
+
+@import "_config";
+@import "_config-flex";
+@import "_delivery-list";
+@import "_delivery-search";
+@import "_delivery-template-view";

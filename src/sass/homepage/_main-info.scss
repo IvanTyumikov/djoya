@@ -1,0 +1,50 @@
+.main-info {
+    margin-top: 50px;
+    @media screen and (max-width: 768px) {
+        margin-top: calc(20px + (50 - 20) * ((100vw - 320px) / (768 - 320)));
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__topper {
+        font-family: 'Int-m';
+        font-size: 20px;
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (768 - 320)));
+        }
+    }
+    &__title {
+        margin: 20px 0 40px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: calc(
+                25px + (40 - 25) * ((100vw - 320px) / (768 - 320))
+            );
+        }
+        h1 {
+            color: #000;
+            margin: 0;
+            font-family: 'PD-sb';
+            font-size: 70px;
+            text-align: center;
+            @media screen and (max-width: 768px) {
+                font-size: calc(
+                    34px + (70 - 34) * ((100vw - 320px) / (768 - 320))
+                );
+            }
+        }
+    }
+    &__bottom {
+        font-family: 'Int-m';
+        font-size: 25px;
+        max-width: 588px;
+        text-align: center;
+        line-height: normal;
+        @media screen and (max-width: 768px) {
+            font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (768 - 320)));
+        }
+    }
+}

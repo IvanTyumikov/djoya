@@ -1,0 +1,167 @@
+#promoCode{
+	.modal-dialog{
+		max-width: 830px;
+		width: 100%;
+		.modal-content{
+			padding: 0;
+			//background: url("../images/promocode3.jpg") top left no-repeat;
+			background-size: contain;
+			border-radius: 16px;
+			background: transparent;
+			.modal__close{
+				z-index: 5;
+			}
+			@at-root.promocode-img{
+				img{
+					border-radius: 16px;
+				}
+			}
+			/*.modal__body{
+				@at-root.promocode{
+					position: relative;
+					padding: 3rem 4rem;
+					@media(max-width: 576px){
+						padding: 3rem 1.5rem;
+						padding-top: 5rem;
+					}
+					&__top{
+						position: relative;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						
+						width: 373px;
+						height: 51px;
+						background: transparent url("../images/promocode-bg-top.png") center center no-repeat;
+						
+						font-weight: bold;
+						font-size: 2.2rem;
+						line-height: 100%;
+						text-align: center;
+						color: #FFFFFF;
+						z-index: 2;
+						
+						@media(max-width: 576px){
+							font-size: 1.6rem;
+							width: 260px;
+						}
+					}
+					&__discount{
+						position: relative;
+						display: flex;
+						align-items: flex-end;
+						margin-top: 1.4rem;
+						z-index: 2;
+						&-text{
+							font-weight: bold;
+							font-size: 2.9rem;
+							line-height: 100%;
+							text-transform: uppercase;
+							color: #FFE600;
+							
+							margin-right: 1rem;
+							@media(max-width: 576px){
+								font-size: 2rem;
+							}
+						}
+						&-percent{
+							display: flex;
+							align-items: flex-end;
+							font-weight: 900;
+							font-size: 14.9rem;
+							line-height: 100%;
+							color: #FFE600;
+							margin-bottom: -1.5rem;
+							@media(max-width: 576px){
+								font-size: 10rem;
+								margin-bottom: -1rem;
+							}
+							&-current{
+								font-size: 6rem;
+								line-height: 140%;
+								margin-left: -20px;
+								@media(max-width: 576px){
+									line-height: 120%;
+									font-size: 5rem;
+									margin-left: -10px;
+								}
+							}
+						}
+					}
+					&__instruction{
+						position: relative;
+						font-size: 1.6rem;
+						line-height: 100%;
+						color: #FFFFFF;
+						z-index: 2;
+						
+						margin-top: 1.2rem;
+						ul{
+							li{
+								margin-bottom: 3px;
+							}
+						}
+					}
+					&__main{
+						position: relative;
+						max-width: 439px;
+						width: 100%;
+						height: 174px;
+						background: transparent url("../images/promocode-bg-main.png") center center no-repeat;
+						background-size: 100% 100%;
+						z-index: 2;
+						
+						margin-top: 2.1rem;
+						padding: 1.6rem 2.2rem;
+						@media(max-width: 576px){
+							width: 260px;
+							padding: 3rem 2.2rem;
+						}
+						@at-root.promocode__label{
+							font-weight: bold;
+							font-size: 2.9rem;
+							line-height: 100%;
+							text-transform: uppercase;
+							color: #FFFFFF;
+							@media(max-width: 576px){
+								font-size: 2rem;
+							}
+						}
+						@at-root.promocode__value{
+							font-weight: 900;
+							font-size: 8.8rem;
+							line-height: 100%;
+							text-transform: uppercase;
+							color: #FFFFFF;
+							text-shadow: -6px 10px 20px rgba(0, 0, 0, 0.25);
+							@media(max-width: 576px){
+								font-size: 4rem;
+							}
+						}
+						@at-root.promocode__time{
+							font-weight: bold;
+							font-size: 1.9rem;
+							line-height: 100%;
+							color: #FFFFFF;
+							
+							margin-top: 5px;
+						}
+					}
+					&__img{
+						position: absolute;
+						right: 0;
+						top: 0;
+						height: 100%;
+						z-index: 1;
+						img{
+							border-radius: 0 10px 10px 0;
+						}
+						@media(max-width: 380px){
+							display: none;
+						}
+					}
+				}
+			}*/
+		}
+	}
+}
